@@ -1,1 +1,14 @@
-/* Empty. Add your own CSS if you like */
+/* borderless button for survey item */
+.itembutton {
+    border-width: 0px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+/* selected survey item */
+.selecteditembutton {
+    border-width: 5px;
+    border-color: #11c1f3;
+    border-radius: 50%;
+    background-color: transparent;
+}
