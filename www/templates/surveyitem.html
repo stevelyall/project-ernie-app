@@ -1,42 +1,40 @@
 
-<ion-view view-title="Survey Item">
+<ion-view view-title="SurveyItem">
+    <ion-header-bar class="bar bar-header bar-calm">
+        <h1 class="title">Sample Survey</h1>
+    </ion-header-bar>
+
     <ion-content>
-        <ion-header-bar class="bar bar-header bar-calm">
-            <h1 class="title">Sample Survey</h1>
-        </ion-header-bar>
-        <ion-content style="margin: 5px">
+        <!--Question items presented here-->
+        <div class="card">
+            <!-- question here -->
+            <!--<p id="question" ng-repeat="item in questions">-->
+                <!--{{item.question}}-->
+            <!--</p>-->
+        </div>
+        <!--Scale-->
 
-            <!--Question items presented here-->
-            <div class="card">
-                <div class="item item-text-wrap">
-                    This is a survey question. How would you respond?
-                </div>
-            </div>
+        <a class="selecteditembutton itembutton button">1</a>
+        <a class="itembutton button">2</a>
+        <a class="itembutton button">3</a>
+        <a class="itembutton button">4</a>
+        <a class="itembutton button">5</a>
+        <a class="itembutton button">6</a>
+        <a class="itembutton button">7</a>
+        <a class="itembutton button">8</a>
+        <a class="itembutton button">9</a>
+        <a class="itembutton button">10</a>
 
-            <!--Scale-->
-            <!-- <div class="button-bar"> -->
-            <a class="selecteditembutton itembutton button">1</a>
-            <a class="itembutton button">2</a>
-            <a class="itembutton button">3</a>
-            <a class="itembutton button">4</a>
-            <a class="itembutton button">5</a>
-            <a class="itembutton button">6</a>
-            <a class="itembutton button">7</a>
-            <a class="itembutton button">8</a>
-            <a class="itembutton button">9</a>
-            <a class="itembutton button">10</a>
-            <!-- </div> -->
 
-            <!-- Navigation -->
-            <nav style="margin: 10px">
-                <!-- Back Button -->
-                <button class="button button-calm" style="float:left">
-                    Back
-                </button>
-                <button class="button button-calm" style="float:right">
-                    Next
-                </button>
-            </nav>
-
-        </ion-content>
-        <ion-view view-title="Survey Item">
+        <!-- Navigation -->
+        <nav style="margin: 10px">
+            <!-- Back Button -->
+            <button class="button button-calm" style="float:left" id="backButton" ng-click="test">
+                Back
+            </button>
+            <button class="button button-calm" style="float:right" id="forwardButton">
+                Next
+            </button>
+        </nav>
+    </ion-content>
+</ion-view>
