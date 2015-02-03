@@ -1,3 +1,5 @@
+
+
 /* borderless button for survey item */
 .itembutton {
     border-width: 0px;
@@ -11,4 +13,25 @@
     border-color: #11c1f3;
     border-radius: 50%;
     background-color: transparent;
+}
+
+.horizontal_center {
+    /* for horizontal_center class */
+    width: 100%;
+    text-align: center; /* text aligning to the center */
+    margin-left: 50%;
+}
+
+#scaleContainer {
+    margin: 5px;
+}
+
+/* card holds question in survey view*/
+.card {
+    padding: 10px;
+}
+
+.tabs-calm {
+    position: fixed;
+    bottom: 0px;
 }

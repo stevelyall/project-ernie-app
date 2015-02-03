@@ -19,6 +19,8 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers'])
         });
     })
 
+
+
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
 

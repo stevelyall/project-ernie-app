@@ -6,35 +6,30 @@
 
     <ion-content>
         <!--Question items presented here-->
-        <div class="card">
-            <!-- question here -->
-            <!--<p id="question" ng-repeat="item in questions">-->
-                <!--{{item.question}}-->
-            <!--</p>-->
+        <div class="card"  class='horizontal_center' >
+            <p>{{currentQuestion.question}}</p>
         </div>
+
         <!--Scale-->
-
-        <a class="selecteditembutton itembutton button">1</a>
-        <a class="itembutton button">2</a>
-        <a class="itembutton button">3</a>
-        <a class="itembutton button">4</a>
-        <a class="itembutton button">5</a>
-        <a class="itembutton button">6</a>
-        <a class="itembutton button">7</a>
-        <a class="itembutton button">8</a>
-        <a class="itembutton button">9</a>
-        <a class="itembutton button">10</a>
-
+        <div id="scaleContainer" class="horizontal_center">
+            <a id="b1" class="selecteditembutton itembutton button" ng-click="select(b1)">1</a>
+            <a class="itembutton button">2</a>
+            <a class="itembutton button">3</a>
+            <a class="itembutton button">4</a>
+            <a class="itembutton button">5</a>
+            <a class="itembutton button">6</a>
+            <a class="itembutton button">7</a>
+            <a class="itembutton button">8</a>
+            <a class="itembutton button">9</a>
+            <a class="itembutton button">10</a>
+        </div>
 
         <!-- Navigation -->
         <nav style="margin: 10px">
-            <!-- Back Button -->
-            <button class="button button-calm" style="float:left" id="backButton" ng-click="test">
-                Back
-            </button>
-            <button class="button button-calm" style="float:right" id="forwardButton">
+            <button class="button button-calm" style="float:right" id="nextButton" ng-click="nextClick()">
                 Next
             </button>
         </nav>
+
     </ion-content>
 </ion-view>
