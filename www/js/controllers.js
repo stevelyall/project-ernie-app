@@ -8,7 +8,6 @@ angular.module('ernie-app.controllers',[])
 
         $scope.questions;
 
-
         // create model for questions
         // use http service to get data from json file
         $http.get('js/questions.json').success(function(data) {
@@ -20,10 +19,19 @@ angular.module('ernie-app.controllers',[])
         // handler for next button
         $scope.nextClick = function() {
             console.log("next Button Clicked");
-
-            for (var i = 0; i<$scope.questions.items.length; i++) {
+            console.log($scope.questions.toString());
+            for (var i = 0; i<($scope.questions.length); i++) {
                 console.log(i);
             }
+
+            var button = document.getElementById('b1');
+            console.log(button.innerHTML);
+
+            // setclass
+            button.setClass();
+        }
+
+        $scope.numSelect = function numSelect(num) {
 
         }
 
