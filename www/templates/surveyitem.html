@@ -1,4 +1,3 @@
-
 <ion-view view-title="SurveyItem">
     <ion-header-bar class="bar bar-header bar-calm">
         <h1 class="title">Sample Survey</h1>
@@ -6,27 +5,27 @@
 
     <ion-content>
         <!--Question items presented here-->
-        <div class="card"  class='horizontal_center' >
+        <div class="card" class="horizontal_center" >
             <p>{{currentQuestion.question}}</p>
         </div>
 
         <!--Scale-->
         <div id="scaleContainer" class="horizontal_center">
-            <a id="b1" class="selecteditembutton itembutton button" ng-click="select('b1')">1</a>
-            <a class="itembutton button">2</a>
-            <a class="itembutton button">3</a>
-            <a class="itembutton button">4</a>
-            <a class="itembutton button">5</a>
-            <a class="itembutton button">6</a>
-            <a class="itembutton button">7</a>
-            <a class="itembutton button">8</a>
-            <a class="itembutton button">9</a>
-            <a class="itembutton button">10</a>
+            <a id="0" class="itembutton button" ng-click="numSelect('0')">1</a>
+            <a id="1" class="itembutton button" ng-click="numSelect('1')">2</a>
+            <a id="2" class="itembutton button" ng-click="numSelect('2')">3</a>
+            <a id="3" class="itembutton button" ng-click="numSelect('3')">4</a>
+            <a id="4" class="itembutton button" ng-click="numSelect('4')">5</a>
+            <a id="5" class="itembutton button" ng-click="numSelect('5')">6</a>
+            <a id="6" class="itembutton button" ng-click="numSelect('6')">7</a>
+            <a id="7" class="itembutton button" ng-click="numSelect('7')">8</a>
+            <a id="8" class="itembutton button" ng-click="numSelect('8')">9</a>
+            <a id="9" class="itembutton button" ng-click="numSelect('9')">10</a>
         </div>
 
         <!-- Navigation -->
         <nav style="margin: 10px">
-            <button class="button button-calm" style="float:right" id="nextButton" ng-click="nextClick()">
+            <button class="button button-calm" style="float:right;display:none" id="nextButton" ng-click="nextClick()">
                 Next
             </button>
         </nav>

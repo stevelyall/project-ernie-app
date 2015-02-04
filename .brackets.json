@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/stevenlyall/git/ernie-app/platforms/android/assets/www/lib/ionic/js/angular-ui/angular-ui-router.js",
+        "/Users/stevenlyall/git/ernie-app/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js",
+        "/Users/stevenlyall/git/ernie-app/platforms/android/assets/www/lib/ionic/js/angular/angular-animate.js"
+    ]
+}
