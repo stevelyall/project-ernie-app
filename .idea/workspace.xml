@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0123902-2dc2-4541-b655-49fc93ed51d5" name="Default" comment="getting button">
+    <list default="true" id="f0123902-2dc2-4541-b655-49fc93ed51d5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -42,8 +42,8 @@
           <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6475996" vertical-offset="146" max-vertical-offset="1140">
-                  <caret line="52" column="67" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="67" />
+                <state vertical-scroll-proportion="0.19918284" vertical-offset="0" max-vertical-offset="1140">
+                  <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
                   <folding />
                 </state>
               </provider>
@@ -246,7 +246,13 @@
       <option name="project" value="LOCAL" />
       <updated>1423010817821</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="paging through list of questions">
+      <created>1423858341441</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1423858341441</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -317,7 +323,8 @@
     <MESSAGE value="locked orientation to landscape" />
     <MESSAGE value="Centered, Next Button" />
     <MESSAGE value="getting button" />
-    <option name="LAST_COMMIT_MESSAGE" value="getting button" />
+    <MESSAGE value="paging through list of questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="paging through list of questions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -737,8 +744,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6475996" vertical-offset="146" max-vertical-offset="1140">
-          <caret line="52" column="67" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.19918284" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
           <folding />
         </state>
       </provider>

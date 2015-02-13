@@ -36,7 +36,7 @@ angular.module('ernie-app.controllers',[])
             console.log("next Button Clicked");
 
             // save response
-            // $scope.currentQuestion.response = selectedResponse;
+            $scope.currentQuestion.response = parseInt(selectedResponse) + 1;
             console.log("response saved " + $scope.currentQuestion.response);
 
             // advance to next question
