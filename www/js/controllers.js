@@ -3,7 +3,10 @@ angular.module('ernie-app.controllers',[])
     .controller('surveyCtrl', function ($scope, $http) {
 
         // current question number
-        var questionNum = 0;
+        var questionIndex = 0;
+
+        // questions retrieved with http service
+        $scope.questions;
 
         // holds current question data
         $scope.currentQuestion;
@@ -15,20 +18,15 @@ angular.module('ernie-app.controllers',[])
         // use http service to get data from json file
         $http.get('js/questions.json').success(function(data) {
             $scope.questions = data.items;
-            $scope.getQuestion(questionNum);
+            $scope.getQuestion(questionIndex);
         })
 
-        // get a new question at sepcified index from the question list
+        // get a new question at specified index from the question list
         $scope.getQuestion = function(index) {
             $scope.currentQuestion = $scope.questions[index];
         }
 
-        // get response button elements
-        var buttons = [];
-        for (var i = 0; i < 10; i++) {
-            var button = document.getElementById(i);
-            buttons[i] = button;
-        }
+
 
 
         // handler for next button
@@ -41,8 +39,18 @@ angular.module('ernie-app.controllers',[])
 
             // advance to next question
             $scope.selectedResponse = -1;
-            questionNum++;
-            $scope.getQuestion(questionNum);
+            questionIndex++;
+            console.log("advancing to question " + (questionIndex+1));
+            $scope.getQuestion(questionIndex);
+
+            // check if end of survey reached
+            console.log(questionIndex+1 + " " + $scope.questions.length);
+            if (questionIndex+1 > $scope.questions.length) {
+                console.log("End of survey");
+
+                // if completed
+                return;
+            }
 
             // clear selections
             for (var i in buttons) {
@@ -53,9 +61,17 @@ angular.module('ernie-app.controllers',[])
             document.getElementById("nextButton").style.display = "none";
         }
 
+        // get response button elements
+        var buttons = [];
+        for (var i = 0; i < 10; i++) {
+            var button = document.getElementById(i);
+            buttons[i] = button;
+        }
+
+        // handler for response button clicks
         $scope.numSelect = function numSelect(num) {
             var buttonPushed = document.getElementById(num);
-            console.log(buttonPushed.innerHTML);
+            //console.log(buttonPushed.innerHTML);
 
             for (var i in buttons) {
                 buttons[i].className = "itembutton button";
