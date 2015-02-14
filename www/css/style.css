@@ -30,11 +30,20 @@
 }
 
 /* card holds question in survey view*/
-.card {
+.survey-card {
+    margin: 10px;
     padding: 10px;
 }
 
 .tabs-calm {
     position: fixed;
     bottom: 0px;
+}
+
+/* not centering? */
+#send-feedback-button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
 }

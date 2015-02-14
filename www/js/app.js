@@ -24,15 +24,24 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers'])
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
 
+            // initial state
             .state('home', {
                 url: "/home",
                 templateUrl: 'templates/home.html'
             })
 
+            // state for survey
             .state('survey', {
                 url: "/survey",
                 templateUrl: 'templates/surveyitem.html',
                 controller: 'surveyCtrl'
+            })
+
+            // state for finished survey
+            .state('afterSurvey', {
+                url: "/aftersurvey",
+                templateUrl: 'templates/aftersurvey.html',
+                controller: 'afterSurveyCtrl'
             })
 
         $urlRouterProvider.otherwise('/templates/home.html');

@@ -1,7 +1,7 @@
 angular.module('ernie-app.controllers',[])
 
-    .controller('surveyCtrl', function ($scope, $http) {
-
+    // survey controller
+    .controller('surveyCtrl', function ($scope, $http, $state) {
         // current question number
         var questionIndex = 0;
 
@@ -26,9 +26,6 @@ angular.module('ernie-app.controllers',[])
             $scope.currentQuestion = $scope.questions[index];
         }
 
-
-
-
         // handler for next button
         $scope.nextClick = function() {
             console.log("next Button Clicked");
@@ -49,6 +46,7 @@ angular.module('ernie-app.controllers',[])
                 console.log("End of survey");
 
                 // if completed
+                $state.go('afterSurvey');
                 return;
             }
 
@@ -84,4 +82,16 @@ angular.module('ernie-app.controllers',[])
             document.getElementById("nextButton").style.display = "";
 
         }
+    })
+
+    // post-survey controller
+    .controller('afterSurveyCtrl', function($scope) {
+        $scope.startSendFeedback = function() {
+            var subject = "ERAProject Mobile App Feedback";
+            var body = "";
+            var toRecipients = "myeraproject@gmail.com";
+            console.log(window);
+            window.plugins.emailComposer.showEmailComposerWithCallback(callback, subject, body, toRecipients, null, null, true, null, null);
+
+        };
     });
