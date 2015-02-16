@@ -85,32 +85,20 @@ angular.module('ernie-app.controllers',[])
     })
 
     // post-survey controller
-    .controller('afterSurveyCtrl', function($scope, $cordovaEmailComposer) {
-        $scope.startSendFeedback = function() {
+    .controller('afterSurveyCtrl', function($scope) {
+        $scope.sendFeedbackEmail = function() {
+            // check if email plugin exists
+            if (window.plugins && window.plugins.emailComposer) {
+                var subject = "ERA Application Feedback";
+                var body = "";
+                var to = "myeraproject@gmail.com";
 
-            $cordovaEmailComposer.isAvailable().then(function() {
-                // is available
-            }, function () {
-                // not available
-            });
+                // compose email
+                window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
+                    console.log("Email successful");
+                }, subject, body, to, null, null, true, null, null);
+            }
 
-            var email = {
-                to: 'max@mustermann.de',
-                cc: 'erika@mustermann.de',
-                bcc: ['john@doe.com', 'jane@doe.com'],
-                attachments: [
-                    'file://img/logo.png',
-                    'res://icon.png',
-                    'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
-                    'file://README.pdf'
-                ],
-                subject: 'Cordova Icons',
-                body: 'How are you? Nice greetings from Leipzig',
-                isHtml: true
-            };
 
-            $cordovaEmailComposer.open(email).then(null, function () {
-                // user cancelled email
-            });
         }
     });
