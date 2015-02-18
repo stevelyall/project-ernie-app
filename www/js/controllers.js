@@ -101,7 +101,19 @@ angular.module('ernie-app.controllers',[])
             }
         }
 
-        var feedbackDone = function() {
-            document.getElementById("send-feedback-button").style.display = "none";
-           }
+        $scope.buildConfirmMsg = function() {
+            // message to be displayed after sending feedback
+            var afterEmailCard = document.createElement("div");
+            afterEmailCard.class = "card";
+            var afterEmailMsg = document.createTextNode("Thank you for your feedback!");
+            afterEmailCard.appendChild(afterEmailMsg);
+            return afterEmailCard;
+        }
+
+        $scope.feedbackDone = function() {
+
+            //document.getElementById("send-feedback-button").style.display = "none";
+            angular.element.find("ion-content");
+            $scope.element.append($scope.buildConfirmMsg());
+        }
     });
