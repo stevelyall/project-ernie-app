@@ -20,9 +20,10 @@
 
 .horizontal_center {
     /* for horizontal_center class */
-    width: 100%;
     text-align: center; /* text aligning to the center */
-    margin-left: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 #scaleContainer {
@@ -40,7 +41,6 @@
     bottom: 0px;
 }
 
-/* not centering? */
 #send-feedback-button {
     margin-left: auto;
     margin-right: auto;
