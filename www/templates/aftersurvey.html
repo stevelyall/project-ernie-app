@@ -3,7 +3,7 @@
         <h1 class="title">Sample Survey</h1>
     </ion-header-bar>
     <ion-content>
-        <div class="card">
+        <div id="feedback-prompt" class="card">
             <div class="item item-divider">
                 Thanks for completing the questionnaire!
             </div>
@@ -11,6 +11,12 @@
                 Help us improve the experience! We would love to hear from you!
             </div>
         </div>
-        <button id="send-feedback-button" class="button button-calm" ng-click="feedbackDone()">Tell us what you think!</button>
-</ion-content>
+        <button id="send-feedback-button" class="button button-calm" ng-click="sendFeedbackEmail()">Tell us what you think!</button>
+
+        <div id="post-feedback-msg" class="card">
+            <div class="item item-text-wrap">
+                Thank you for your feedback!
+            </div>
+        </div>
+    </ion-content>
 </ion-view>

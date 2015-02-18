@@ -47,3 +47,7 @@
     width: 30%;
     display: block;
 }
+
+#post-feedback-msg {
+    display: none;
+}

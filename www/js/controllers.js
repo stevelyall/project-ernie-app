@@ -94,26 +94,17 @@ angular.module('ernie-app.controllers',[])
             if (window.plugins && window.plugins.emailComposer) {
                 var subject = "ERA Application Feedback";
                 var body = "";
-                var to = "myeraproject@gmail.com";
+                var to = ["myeraproject@gmail.com"];
 
                 // compose email
                 window.plugins.emailComposer.showEmailComposerWithCallback(feedbackDone(), subject, body, to, null, null, true, null, null);
             }
         }
 
-        //$scope.buildConfirmMsg = function() {
-        //    // message to be displayed after sending feedback
-        //    var afterEmailCard = document.createElement("div");
-        //    afterEmailCard.class = "card";
-        //    var afterEmailMsg = document.createTextNode("Thank you for your feedback!");
-        //    afterEmailCard.appendChild(afterEmailMsg);
-        //    return afterEmailCard;
-        //}
-
-        $scope.feedbackDone = function() {
-
-            //document.getElementById("send-feedback-button").style.display = "none";
-            angular.element.find("ion-content");
-            $scope.element.append($scope.buildConfirmMsg());
+        var feedbackDone = function() {
+            // hide feedback prompt and button, show new message
+            document.getElementById("feedback-prompt").style.display = "none";
+            document.getElementById("send-feedback-button").style.display = "none";
+            document.getElementById("post-feedback-msg").style.display = "block";
         }
     });
