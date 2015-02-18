@@ -84,9 +84,12 @@ angular.module('ernie-app.controllers',[])
         }
     })
 
-    // post-survey controller
+    // after-survey page controller
     .controller('afterSurveyCtrl', function($scope) {
+
+        // handler for send feedback button click
         $scope.sendFeedbackEmail = function() {
+            console.log("feedback button clicked");
             // check if email plugin exists
             if (window.plugins && window.plugins.emailComposer) {
                 var subject = "ERA Application Feedback";
@@ -94,11 +97,11 @@ angular.module('ernie-app.controllers',[])
                 var to = "myeraproject@gmail.com";
 
                 // compose email
-                window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
-                    console.log("Email successful");
-                }, subject, body, to, null, null, true, null, null);
+                window.plugins.emailComposer.showEmailComposerWithCallback(feedbackDone(), subject, body, to, null, null, true, null, null);
             }
-
-
         }
+
+        var feedbackDone = function() {
+            document.getElementById("send-feedback-button").style.display = "none";
+           }
     });
