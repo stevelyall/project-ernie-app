@@ -101,14 +101,14 @@ angular.module('ernie-app.controllers',[])
             }
         }
 
-        $scope.buildConfirmMsg = function() {
-            // message to be displayed after sending feedback
-            var afterEmailCard = document.createElement("div");
-            afterEmailCard.class = "card";
-            var afterEmailMsg = document.createTextNode("Thank you for your feedback!");
-            afterEmailCard.appendChild(afterEmailMsg);
-            return afterEmailCard;
-        }
+        //$scope.buildConfirmMsg = function() {
+        //    // message to be displayed after sending feedback
+        //    var afterEmailCard = document.createElement("div");
+        //    afterEmailCard.class = "card";
+        //    var afterEmailMsg = document.createTextNode("Thank you for your feedback!");
+        //    afterEmailCard.appendChild(afterEmailMsg);
+        //    return afterEmailCard;
+        //}
 
         $scope.feedbackDone = function() {
 
