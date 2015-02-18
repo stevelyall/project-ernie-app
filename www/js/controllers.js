@@ -94,7 +94,7 @@ angular.module('ernie-app.controllers',[])
             if (window.plugins && window.plugins.emailComposer) {
                 var subject = "ERA Application Feedback";
                 var body = "";
-                var to = "myeraproject@gmail.com";
+                var to = ["myeraproject@gmail.com"];
 
                 // compose email
                 window.plugins.emailComposer.showEmailComposerWithCallback(feedbackDone(), subject, body, to, null, null, true, null, null);
@@ -102,6 +102,9 @@ angular.module('ernie-app.controllers',[])
         }
 
         var feedbackDone = function() {
+            // hide feedback prompt and button, show new message
+            document.getElementById("feedback-prompt").style.display = "none";
             document.getElementById("send-feedback-button").style.display = "none";
-           }
+            document.getElementById("post-feedback-msg").style.display = "block";
+        }
     });
