@@ -5,6 +5,7 @@ machine:
 
 test:
   pre:
+    - npm install
     - npm start:
         background: true
     - sleep 5

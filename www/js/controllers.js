@@ -59,6 +59,17 @@ angular.module('ernie-app.controllers',[])
             document.getElementById("nextButton").style.display = "none";
         }
 
+        .directive('buttonBuilder', function($scope, $compile) {
+                return {
+                    template: '<div>test</div>',
+                    restrict: 'E',
+                    link: function(rescope, elm){
+                        console.log(elm);
+                        elm.after($compile('<div></div>')($scope));
+                    }
+                }
+            })
+
         // get response button elements
         var buttons = [];
         for (var i = 0; i < 10; i++) {
