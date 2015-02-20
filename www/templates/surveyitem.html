@@ -23,6 +23,12 @@
             <a id="9" class="itembutton button" ng-click="numSelect('9')">10</a>
         </div>
 
+        <!-- Anchor points -->
+        <p id="lowanchor">{{currentQuestion.lowanchortext}}</p>
+        <p id="highanchor">{{currentQuestion.highanchortext}}</p>
+        <p id="midanchor" class="horizontal_center">{{currentQuestion.midanchortext}}</p>
+
+
         <!-- Navigation -->
         <nav style="margin: 10px">
             <button class="button button-calm" style="float:right;display:none" id="nextButton" ng-click="nextClick()">

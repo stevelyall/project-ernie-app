@@ -36,6 +36,18 @@
     padding: 10px;
 }
 
+/* anchor points */
+#lowanchor {
+    position: fixed;
+    left: 5px;
+}
+
+#highanchor {
+    position: fixed;
+    display:inline;
+    right: 5px;
+}
+
 .tabs-calm {
     position: fixed;
     bottom: 0px;
