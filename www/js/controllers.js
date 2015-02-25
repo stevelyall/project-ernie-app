@@ -1,15 +1,23 @@
 angular.module('ernie-app.controllers',[])
 
+    .directive('scaleDirective', function() {
+        return {
+            link: function(scope, element){
+                    element.bind('click', function() {
+                    scope.numSelect(element.attr('id'));
+                });
+            }
+        }
+    })
+
     // survey controller
     .controller('surveyCtrl', function ($scope, $http, $state) {
+
         // current question number
-        var questionIndex = 0;
+        $scope.questionIndex = 0;
 
         // questions retrieved with http service
         $scope.questions;
-
-        // holds current question data
-        $scope.currentQuestion;
 
         // index of selected response
         $scope.selectedResponse = -1;
@@ -18,12 +26,11 @@ angular.module('ernie-app.controllers',[])
         // use http service to get data from json file
         $http.get('js/questions.json').success(function(data) {
             $scope.questions = data.items;
-            $scope.getQuestion(questionIndex);
         })
 
-        // get a new question at specified index from the question list
-        $scope.getQuestion = function(index) {
-            $scope.currentQuestion = $scope.questions[index];
+        // returns an array for ng-repeat to iterate through creating scale buttons
+        $scope.provideScale = function(num) {
+            return new Array(num);
         }
 
         // handler for next button
@@ -31,18 +38,17 @@ angular.module('ernie-app.controllers',[])
             console.log("next Button Clicked");
 
             // save response
-            $scope.currentQuestion.response = parseInt(selectedResponse) + 1;
-            console.log("response saved " + $scope.currentQuestion.response);
+            $scope.questions[$scope.questionIndex].response = parseInt($scope.selectedResponse) + 1;
+            console.log("response saved " + $scope.questions[$scope.questionIndex].response);
 
             // advance to next question
             $scope.selectedResponse = -1;
-            questionIndex++;
-            console.log("advancing to question " + (questionIndex+1));
-            $scope.getQuestion(questionIndex);
+            $scope.questionIndex++;
+            console.log("advancing to question " + ($scope.questionIndex+1));
 
             // check if end of survey reached
-            console.log(questionIndex+1 + " " + $scope.questions.length);
-            if (questionIndex+1 > $scope.questions.length) {
+            console.log($scope.questionIndex+1 + " " + $scope.questions.length);
+            if ($scope.questionIndex+1 > $scope.questions.length) {
                 console.log("End of survey");
 
                 // if completed
@@ -51,43 +57,35 @@ angular.module('ernie-app.controllers',[])
             }
 
             // clear selections
-            for (var i in buttons) {
-                buttons[i].className = "itembutton button";
+            for (var i in $scope.buttons) {
+                $scope.buttons[i].className = "itembutton button";
             }
 
             // hide next button
             document.getElementById("nextButton").style.display = "none";
+
         }
 
-        .directive('buttonBuilder', function($scope, $compile) {
-                return {
-                    template: '<div>test</div>',
-                    restrict: 'E',
-                    link: function(rescope, elm){
-                        console.log(elm);
-                        elm.after($compile('<div></div>')($scope));
-                    }
-                }
-            })
-
-        // get response button elements
-        var buttons = [];
-        for (var i = 0; i < 10; i++) {
-            var button = document.getElementById(i);
-            buttons[i] = button;
-        }
 
         // handler for response button clicks
         $scope.numSelect = function numSelect(num) {
+            console.log(num + " passed to numSelect");
+            var buttons = new Array($scope.questions[$scope.questionIndex].scale);
+            for (var i = 0; i<buttons.length; i++) {
+                var button = document.getElementById(i);
+                buttons[i] = button;
+            }
+            console.log(buttons);
             var buttonPushed = document.getElementById(num);
-            //console.log(buttonPushed.innerHTML);
+
+            console.log("button " + buttonPushed.getAttribute("id") + " pushed");
 
             for (var i in buttons) {
                 buttons[i].className = "itembutton button";
             }
 
             buttonPushed.className += (" selecteditembutton");
-            selectedResponse = num;
+            $scope.selectedResponse = num;
 
             // make next button visible
             document.getElementById("nextButton").style.display = "";
@@ -118,4 +116,4 @@ angular.module('ernie-app.controllers',[])
             document.getElementById("send-feedback-button").style.display = "none";
             document.getElementById("post-feedback-msg").style.display = "block";
         }
-    });
+    })

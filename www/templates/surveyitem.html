@@ -3,30 +3,29 @@
         <h1 class="title">Sample Survey</h1>
     </ion-header-bar>
 
-    <ion-content>
+    <ion-content ng-controller="surveyCtrl">
         <!--Question items presented here-->
         <div class="survey-card" class="horizontal_center" >
-            <p id="question-text">{{currentQuestion.question}}</p>
+            <p id="question-text">{{questions[questionIndex].question}}</p>
         </div>
+
+        <div scale-directive></div>
 
         <!--Scale-->
         <div id="scaleContainer" class="horizontal_center">
-            <a id="0" class="itembutton button" ng-click="numSelect('0')">1</a>
-            <a id="1" class="itembutton button" ng-click="numSelect('1')">2</a>
-            <a id="2" class="itembutton button" ng-click="numSelect('2')">3</a>
-            <a id="3" class="itembutton button" ng-click="numSelect('3')">4</a>
-            <a id="4" class="itembutton button" ng-click="numSelect('4')">5</a>
-            <a id="5" class="itembutton button" ng-click="numSelect('5')">6</a>
-            <a id="6" class="itembutton button" ng-click="numSelect('6')">7</a>
-            <a id="7" class="itembutton button" ng-click="numSelect('7')">8</a>
-            <a id="8" class="itembutton button" ng-click="numSelect('8')">9</a>
-            <a id="9" class="itembutton button" ng-click="numSelect('9')">10</a>
+            <a ng-repeat="i in provideScale(questions[questionIndex].scale) track by $index"
+               id="{{$index}}"
+               ngSelected=""
+               class="itembutton button"
+               scale-directive>
+                {{$index}}
+            </a>
         </div>
 
         <!-- Anchor points -->
-        <p id="lowanchor">{{currentQuestion.lowanchortext}}</p>
-        <p id="highanchor">{{currentQuestion.highanchortext}}</p>
-        <p id="midanchor" class="horizontal_center">{{currentQuestion.midanchortext}}</p>
+        <p id="lowanchor">{{questions[questionIndex].lowanchortext}}</p>
+        <p id="highanchor">{{questions[questionIndex].highanchortext}}</p>
+        <p id="midanchor" class="horizontal_center">{{questions[questionIndex].midanchortext}}</p>
 
 
         <!-- Navigation -->

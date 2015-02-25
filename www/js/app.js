@@ -33,8 +33,7 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers'])
             // state for survey
             .state('survey', {
                 url: "/survey",
-                templateUrl: 'templates/surveyitem.html',
-                controller: 'surveyCtrl'
+                templateUrl: 'templates/surveyitem.html'
             })
 
             // state for finished survey

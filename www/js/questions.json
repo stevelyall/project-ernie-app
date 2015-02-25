@@ -2,58 +2,58 @@
   "items":
   [
     {
-      "id": "1",
+      "id": 1,
       "question": "At the moment I feel happy",
-      "scale": "5",
+      "scale": 5,
       "lowanchortext": "Strongly Disagree",
       "midanchortext": "Neither Agree or Disagree",
       "highanchortext": "Strongly Agree",
-      "response": "0"
+      "response": 0
     },
     {
-      "id": "2",
+      "id": 2,
       "question": "At the moment I feel relaxed",
-      "scale": "5",
+      "scale": 5,
       "lowanchortext": "Strongly Disagree",
       "midanchortext": "Neither Agree or Disagree",
       "highanchortext": "Strongly Agree",
-      "response": "0"
+      "response": 0
     },
     {
-      "id": "3",
+      "id": 3,
       "question": "At the moment I feel angry",
-      "scale": "5",
+      "scale": 5,
       "lowanchortext": "Strongly Disagree",
       "midanchortext": "Neither Agree or Disagree",
       "highanchortext": "Strongly Agree",
-      "response": "0"
+      "response": 0
     },
     {
-      "id": "4",
+      "id": 4,
       "question": "At the moment I feel stressed",
-      "scale": "5",
+      "scale": 5,
       "lowanchortext": "Strongly Disagree",
       "midanchortext": "Neither Agree or Disagree",
       "highanchortext": "Strongly Agree",
-      "response": "0"
+      "response": 0
     },
     {
-      "id": "5",
+      "id": 5,
       "question": "At the moment I feel anxious",
-      "scale": "5",
+      "scale": 5,
       "lowanchortext": "Strongly Disagree",
       "midanchortext": "Neither Agree or Disagree",
       "highanchortext": "Strongly Agree",
-      "response": "0"
+      "response": 0
     },
     {
-      "id": "6",
+      "id": 6,
       "question": "At the moment I feel depressed",
-      "scale": "5",
+      "scale": 5,
       "lowanchortext": "Strongly Disagree",
       "midanchortext": "Neither Agree or Disagree",
       "highanchortext": "Strongly Agree",
-      "response": "0"
+      "response": 0
     }
   ]
 }
