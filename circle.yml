@@ -8,15 +8,9 @@ test:
     - npm install
     - npm install -g cordova
     - npm install -g ionic
-    - ls
-    - ionic platform add android
-    - android update sdk --no-ui
-    - ionic build android
+    - npm start:
+        background: true
     - sleep 5
-    - echo y
-#    - npm start:
-#        background: true
-#    - sleep 5
   override:
 #    - npm run test-single-run
-#    - npm run protractor
+    - npm run protractor
