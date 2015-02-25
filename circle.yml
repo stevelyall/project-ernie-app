@@ -13,8 +13,7 @@ test:
         background: true
     - sleep 5
   override:
-#    - npm run test-single-run
     - cd test
-#   - web-driver update
+    - webdriver-manager update
 #    - ionic serve --address localhost
-    - rotractor protractor.config.js
+    - protractor protractor.config.js
