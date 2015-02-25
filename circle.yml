@@ -17,4 +17,4 @@ test:
     - cd test
 #   - web-driver update
 #    - ionic serve --address localhost
-    - npm run protractor
+    - rotractor protractor.config.js

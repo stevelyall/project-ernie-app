@@ -90,8 +90,8 @@
           <file leaf-file-name="circle.yml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/circle.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.39940828" vertical-offset="0" max-vertical-offset="676">
-                  <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+                <state vertical-scroll-proportion="0.42159763" vertical-offset="0" max-vertical-offset="676">
+                  <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -560,7 +560,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424905292552</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="circle.yml update 15&#10;">
+      <created>1424905522599</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1424905522599</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -626,7 +632,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="addec .travis.yml" />
     <MESSAGE value="test email plugin" />
     <MESSAGE value="email button fixed" />
     <MESSAGE value="added anchor points for static scale" />
@@ -651,7 +656,8 @@
     <MESSAGE value="circle.yml update 12&#10;" />
     <MESSAGE value="circle.yml update 13&#10;" />
     <MESSAGE value="circle.yml update 14&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="circle.yml update 14&#10;" />
+    <MESSAGE value="circle.yml update 15&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="circle.yml update 15&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1029,8 +1035,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/circle.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39940828" vertical-offset="0" max-vertical-offset="676">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.42159763" vertical-offset="0" max-vertical-offset="676">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding />
         </state>
       </provider>
