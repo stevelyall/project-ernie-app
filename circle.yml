@@ -9,7 +9,7 @@ test:
     - npm install -g cordova
     - npm install -g ionic
     - cd project-ernie-app
-    -ls
+    - ls
     - npm start:
         background: true
     - sleep 5
