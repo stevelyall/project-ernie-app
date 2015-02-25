@@ -19,11 +19,11 @@ angular.module('ernie-app.controllers', [])
         // current question number
         $scope.questionIndex = 0;
 
-        // questions retrieved with http service
-        $scope.questions;
-
         // index of selected response
         $scope.selectedResponse = -1;
+
+        // questions
+        $scope.questions;
 
         // create model for questions
         // use http service to get data from json file
@@ -98,7 +98,13 @@ angular.module('ernie-app.controllers', [])
     })
 
     // after-survey page controller
-    .controller('afterSurveyCtrl', function ($scope) {
+    .controller('afterSurveyCtrl', function ($scope, $ionicPlatform, $state) {
+
+        var goHome = function() {
+            console.log("returning to intro screen");
+            $state.go('home');
+        };
+        $ionicPlatform.onHardwareBackButton(goHome);
 
         // handler for send feedback button click
         $scope.sendFeedbackEmail = function () {
