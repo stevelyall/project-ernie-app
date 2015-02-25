@@ -3,7 +3,7 @@ angular.module('ernie-app.controllers',[])
     .directive('scaleDirective', function() {
         return {
             link: function(scope, element){
-                    element.bind('click', function() {
+                element.bind('click', function() {
                     scope.numSelect(element.attr('id'));
                 });
             }
@@ -12,6 +12,9 @@ angular.module('ernie-app.controllers',[])
 
     // survey controller
     .controller('surveyCtrl', function ($scope, $http, $state) {
+
+        // reference to response buttons
+        $scope.buttons;
 
         // current question number
         $scope.questionIndex = 0;
@@ -57,6 +60,7 @@ angular.module('ernie-app.controllers',[])
             }
 
             // clear selections
+
             for (var i in $scope.buttons) {
                 $scope.buttons[i].className = "itembutton button";
             }
@@ -70,18 +74,18 @@ angular.module('ernie-app.controllers',[])
         // handler for response button clicks
         $scope.numSelect = function numSelect(num) {
             console.log(num + " passed to numSelect");
-            var buttons = new Array($scope.questions[$scope.questionIndex].scale);
-            for (var i = 0; i<buttons.length; i++) {
+            $scope.buttons = new Array($scope.questions[$scope.questionIndex].scale);
+            for (var i = 0; i<$scope.buttons.length; i++) {
                 var button = document.getElementById(i);
-                buttons[i] = button;
+                $scope.buttons[i] = button;
             }
-            console.log(buttons);
+            console.log($scope.buttons);
             var buttonPushed = document.getElementById(num);
 
             console.log("button " + buttonPushed.getAttribute("id") + " pushed");
 
-            for (var i in buttons) {
-                buttons[i].className = "itembutton button";
+            for (var i in $scope.buttons) {
+                $scope.buttons[i].className = "itembutton button";
             }
 
             buttonPushed.className += (" selecteditembutton");
