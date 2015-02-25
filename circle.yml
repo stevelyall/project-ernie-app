@@ -12,6 +12,8 @@ test:
     - ionic platform add android
     - android update sdk --no-ui
     - ionic build android
+    - sleep 5
+    - y
 #    - npm start:
 #        background: true
 #    - sleep 5

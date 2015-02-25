@@ -39,11 +39,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1229" max-vertical-offset="1905">
-                  <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.6213018" vertical-offset="375" max-vertical-offset="1905">
+                  <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
@@ -61,10 +61,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/www/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4127219" vertical-offset="546" max-vertical-offset="1245">
+                <state vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="1245">
                   <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
                   <folding />
                 </state>
@@ -78,8 +78,8 @@
           <file leaf-file-name="surveyitem.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/www/templates/surveyitem.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="630">
-                  <caret line="5" column="59" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="59" />
+                <state vertical-scroll-proportion="-19.375" vertical-offset="0" max-vertical-offset="630">
+                  <caret line="31" column="101" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="101" />
                   <folding>
                     <element signature="n#style#0;n#button#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
                   </folding>
@@ -90,8 +90,8 @@
           <file leaf-file-name="circle.yml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/circle.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2662722" vertical-offset="0" max-vertical-offset="676">
-                  <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+                <state vertical-scroll-proportion="0.33284023" vertical-offset="0" max-vertical-offset="676">
+                  <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -487,7 +487,19 @@
       <option name="project" value="LOCAL" />
       <updated>1424902830301</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="circle.yml update 7&#10;">
+      <created>1424903148944</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1424903148944</updated>
+    </task>
+    <task id="LOCAL-00028" summary="circle.yml update 8&#10;">
+      <created>1424903543952</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1424903543952</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -553,8 +565,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="testing mvc" />
-    <MESSAGE value="testing service" />
     <MESSAGE value="locked orientation to landscape" />
     <MESSAGE value="Centered, Next Button" />
     <MESSAGE value="getting button" />
@@ -578,7 +588,9 @@
     <MESSAGE value="circle.yml update 4&#10;" />
     <MESSAGE value="circle.yml update 5&#10;" />
     <MESSAGE value="circle.yml update 6&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="circle.yml update 6&#10;" />
+    <MESSAGE value="circle.yml update 7&#10;" />
+    <MESSAGE value="circle.yml update 8&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="circle.yml update 8&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -905,24 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/surveyitem.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="630">
-          <caret line="5" column="59" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1229" max-vertical-offset="1905">
-          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42986426" vertical-offset="0" max-vertical-offset="840">
@@ -947,16 +941,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4127219" vertical-offset="546" max-vertical-offset="1245">
+        <state vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="1245">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/surveyitem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.375" vertical-offset="0" max-vertical-offset="630">
+          <caret line="31" column="101" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="101" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6213018" vertical-offset="375" max-vertical-offset="1905">
+          <caret line="53" column="40" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/circle.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2662722" vertical-offset="0" max-vertical-offset="676">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.33284023" vertical-offset="0" max-vertical-offset="676">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
       </provider>
