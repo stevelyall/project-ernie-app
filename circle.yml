@@ -9,8 +9,8 @@ test:
     - npm install -g cordova
     - npm install -g ionic
     - ls
+    - ionic platform add android
     - ionic build android
-    - ionic build ios
 #    - npm start:
 #        background: true
 #    - sleep 5
