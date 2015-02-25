@@ -6,6 +6,10 @@ machine:
 test:
   pre:
     - npm install
+    - npm install -g cordova
+    - npm install -g ionic
+    - cd project-ernie-app
+    -ls -al
     - npm start:
         background: true
     - sleep 5
