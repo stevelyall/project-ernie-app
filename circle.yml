@@ -15,6 +15,6 @@ test:
   override:
 #    - npm run test-single-run
     - cd test
-    - web-driver update
-    - ionic serve
+#   - web-driver update
+    - ionic serve --address localhost
     - npm run protractor

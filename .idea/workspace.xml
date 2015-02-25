@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0123902-2dc2-4541-b655-49fc93ed51d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/protractor-conf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/circle.yml" afterPath="$PROJECT_DIR$/circle.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -88,20 +87,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="circle.yml" pinned="false" current-in-tab="false">
+          <file leaf-file-name="circle.yml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/circle.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-                  <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+                <state vertical-scroll-proportion="0.37721893" vertical-offset="0" max-vertical-offset="676">
+                  <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="protractor-conf.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="protractor-conf.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/test/protractor-conf.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.35502958" vertical-offset="0" max-vertical-offset="676">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
                   <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
                   <folding />
                 </state>
@@ -549,7 +548,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424904377601</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="circle.yml update 13&#10;">
+      <created>1424905029075</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1424905029075</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -615,7 +620,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="now saving correct response +1 to index" />
     <MESSAGE value="End of survey condition implemented" />
     <MESSAGE value="addec .travis.yml" />
     <MESSAGE value="test email plugin" />
@@ -640,7 +644,8 @@
     <MESSAGE value="circle.yml update 10&#10;" />
     <MESSAGE value="circle.yml update 11&#10;" />
     <MESSAGE value="circle.yml update 12&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="circle.yml update 12&#10;" />
+    <MESSAGE value="circle.yml update 13&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="circle.yml update 13&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1008,18 +1013,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/circle.yml">
+    <entry file="file://$PROJECT_DIR$/test/protractor-conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/protractor-conf.js">
+    <entry file="file://$PROJECT_DIR$/circle.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35502958" vertical-offset="0" max-vertical-offset="676">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.37721893" vertical-offset="0" max-vertical-offset="676">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
           <folding />
         </state>
       </provider>
