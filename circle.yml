@@ -8,11 +8,12 @@ test:
     - npm install
     - npm install -g cordova
     - npm install -g ionic
-    - cd project-ernie-app
     - ls
-    - npm start:
-        background: true
-    - sleep 5
+    - ionic build android
+    - ionic build ios
+#    - npm start:
+#        background: true
+#    - sleep 5
   override:
-    - npm run test-single-run
-    - npm run protractor
+#    - npm run test-single-run
+#    - npm run protractor
