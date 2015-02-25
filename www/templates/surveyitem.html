@@ -3,16 +3,14 @@
         <h1 class="title">Sample Survey</h1>
     </ion-header-bar>
 
-    <ion-content ng-controller="surveyCtrl">
+    <ion-content ng-controller="surveyCtrl" scroll="false">
         <!--Question items presented here-->
         <div class="survey-card" class="horizontal_center" >
             <p id="question-text">{{questions[questionIndex].question}}</p>
         </div>
 
-        <div scale-directive></div>
-
         <!--Scale-->
-        <div id="scaleContainer" class="horizontal_center">
+        <div id="scale-container" class="horizontal_center">
             <a ng-repeat="i in provideScale(questions[questionIndex].scale) track by $index"
                id="{{$index}}"
                ngSelected=""
@@ -23,16 +21,17 @@
         </div>
 
         <!-- Anchor points -->
-        <p id="lowanchor">{{questions[questionIndex].lowanchortext}}</p>
-        <p id="highanchor">{{questions[questionIndex].highanchortext}}</p>
-        <p id="midanchor" class="horizontal_center">{{questions[questionIndex].midanchortext}}</p>
+        <div id="anchor-container">
+            <p id="lowanchor">{{questions[questionIndex].lowanchortext}}</p>
+            <p id="highanchor">{{questions[questionIndex].highanchortext}}</p>
+            <p id="midanchor" class="horizontal_center">{{questions[questionIndex].midanchortext}}</p>
+        </div>
 
 
         <!-- Navigation -->
-        <nav style="margin: 10px">
-            <button class="button button-calm" style="float:right;display:none" id="nextButton" ng-click="nextClick()">
-                Next
-            </button>
-        </nav>
+        <button class="button button-calm" style="display:none" id="nextButton" ng-click="nextClick()">
+         Next
+        </button>
+
     </ion-content>
 </ion-view>

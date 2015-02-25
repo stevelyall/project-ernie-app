@@ -1,13 +1,12 @@
-.button {
-    margin-left: 2px;
-    margin-left: 2px;
-}
-
 /* borderless button for survey item */
 .itembutton {
     border-width: 0px;
     background-color: transparent;
     border-radius: 50%;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    min-width: 45px;
 }
 
 /* selected survey item */
@@ -18,32 +17,46 @@
     background-color: transparent;
 }
 
+#nextButton {
+    position:fixed;
+    bottom: 10vh;
+    right: 10vh;
+    z-index: 1;
+}
+
 .horizontal_center {
     /* for horizontal_center class */
-    text-align: center; /* text aligning to the center */
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
 
-#scaleContainer {
-    margin: 5px;
-}
-
 /* card holds question in survey view*/
 .survey-card {
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
+}
+
+#question-text {
+    text-align: center;
+}
+
+#anchor-container {
+    position: fixed;
+    bottom: calc(20vh + 50px);
+    width: 100%
 }
 
 /* anchor points */
 #lowanchor {
-    position: fixed;
+    position: absolute;
+    display: inline;
     left: 5px;
 }
 
 #highanchor {
-    position: fixed;
+    position: absolute;
     display:inline;
     right: 5px;
 }
@@ -56,7 +69,7 @@
 #send-feedback-button {
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 40%;
     display: block;
 }
 
