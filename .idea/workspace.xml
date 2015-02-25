@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0123902-2dc2-4541-b655-49fc93ed51d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/circle.yml" afterPath="$PROJECT_DIR$/circle.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ernie-app.iws" />
@@ -91,7 +90,7 @@
             <entry file="file://$PROJECT_DIR$/circle.yml">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.33284023" vertical-offset="0" max-vertical-offset="676">
-                  <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+                  <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -505,7 +504,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424903672854</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="circle.yml update 10&#10;">
+      <created>1424903897901</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1424903897901</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -571,7 +576,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Centered, Next Button" />
     <MESSAGE value="getting button" />
     <MESSAGE value="paging through list of questions" />
     <MESSAGE value="now saving correct response +1 to index" />
@@ -596,7 +600,8 @@
     <MESSAGE value="circle.yml update 7&#10;" />
     <MESSAGE value="circle.yml update 8&#10;" />
     <MESSAGE value="circle.yml update 9&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="circle.yml update 9&#10;" />
+    <MESSAGE value="circle.yml update 10&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="circle.yml update 10&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -974,7 +979,7 @@
     <entry file="file://$PROJECT_DIR$/circle.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33284023" vertical-offset="0" max-vertical-offset="676">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
           <folding />
         </state>
       </provider>
