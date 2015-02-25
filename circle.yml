@@ -8,9 +8,13 @@ test:
     - npm install
     - npm install -g cordova
     - npm install -g ionic
+    - npm install -g protractor
     - npm start:
         background: true
     - sleep 5
   override:
 #    - npm run test-single-run
+    - cd test
+    - web-driver update
+    - ionic serve
     - npm run protractor
