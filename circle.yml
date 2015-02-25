@@ -10,6 +10,8 @@ test:
     - npm install -g ionic
     - ls
     - ionic platform add android
+    - which android
+    - android list sdk --all
     - ionic build android
 #    - npm start:
 #        background: true
