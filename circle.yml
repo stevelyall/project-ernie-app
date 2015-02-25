@@ -16,5 +16,5 @@ test:
 #    - npm run test-single-run
     - cd test
 #   - web-driver update
-    - ionic serve --address localhost
+#    - ionic serve --address localhost
     - npm run protractor
