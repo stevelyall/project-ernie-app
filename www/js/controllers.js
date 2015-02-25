@@ -1,9 +1,9 @@
-angular.module('ernie-app.controllers',[])
+angular.module('ernie-app.controllers', [])
 
-    .directive('scaleDirective', function() {
+    .directive('scaleDirective', function () {
         return {
-            link: function(scope, element){
-                element.bind('click', function() {
+            link: function (scope, element) {
+                element.bind('click', function () {
                     scope.numSelect(element.attr('id'));
                 });
             }
@@ -27,17 +27,17 @@ angular.module('ernie-app.controllers',[])
 
         // create model for questions
         // use http service to get data from json file
-        $http.get('js/questions.json').success(function(data) {
+        $http.get('js/questions.json').success(function (data) {
             $scope.questions = data.items;
         })
 
         // returns an array for ng-repeat to iterate through creating scale buttons
-        $scope.provideScale = function(num) {
+        $scope.provideScale = function (num) {
             return new Array(num);
         }
 
         // handler for next button
-        $scope.nextClick = function() {
+        $scope.nextClick = function () {
             console.log("next Button Clicked");
 
             // save response
@@ -47,11 +47,11 @@ angular.module('ernie-app.controllers',[])
             // advance to next question
             $scope.selectedResponse = -1;
             $scope.questionIndex++;
-            console.log("advancing to question " + ($scope.questionIndex+1));
+            console.log("advancing to question " + ($scope.questionIndex + 1));
 
             // check if end of survey reached
-            console.log($scope.questionIndex+1 + " " + $scope.questions.length);
-            if ($scope.questionIndex+1 > $scope.questions.length) {
+            console.log($scope.questionIndex + 1 + " " + $scope.questions.length);
+            if ($scope.questionIndex + 1 > $scope.questions.length) {
                 console.log("End of survey");
 
                 // if completed
@@ -75,7 +75,7 @@ angular.module('ernie-app.controllers',[])
         $scope.numSelect = function numSelect(num) {
             console.log(num + " passed to numSelect");
             $scope.buttons = new Array($scope.questions[$scope.questionIndex].scale);
-            for (var i = 0; i<$scope.buttons.length; i++) {
+            for (var i = 0; i < $scope.buttons.length; i++) {
                 var button = document.getElementById(i);
                 $scope.buttons[i] = button;
             }
@@ -98,10 +98,10 @@ angular.module('ernie-app.controllers',[])
     })
 
     // after-survey page controller
-    .controller('afterSurveyCtrl', function($scope) {
+    .controller('afterSurveyCtrl', function ($scope) {
 
         // handler for send feedback button click
-        $scope.sendFeedbackEmail = function() {
+        $scope.sendFeedbackEmail = function () {
             console.log("feedback button clicked");
             // check if email plugin exists
             if (window.plugins && window.plugins.emailComposer) {
@@ -114,7 +114,7 @@ angular.module('ernie-app.controllers',[])
             }
         }
 
-        var feedbackDone = function() {
+        var feedbackDone = function () {
             // hide feedback prompt and button, show new message
             document.getElementById("feedback-prompt").style.display = "none";
             document.getElementById("send-feedback-button").style.display = "none";
