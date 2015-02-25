@@ -17,6 +17,11 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers'])
                 StatusBar.styleDefault();
             }
         });
+
+        // back button closes app in all states
+       $ionicPlatform.onHardwareBackButton(function() {
+           navigator.app.exitApp();
+       });
     })
 
 

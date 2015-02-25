@@ -22,14 +22,13 @@ angular.module('ernie-app.controllers', [])
         // index of selected response
         $scope.selectedResponse = -1;
 
-        // questions
-        $scope.questions;
+        console.log($scope.questions);
 
         // create model for questions
         // use http service to get data from json file
-        $http.get('js/questions.json').success(function (data) {
+        $scope.questions = $http.get('js/questions.json').success(function (data) {
             $scope.questions = data.items;
-        })
+        });
 
         // returns an array for ng-repeat to iterate through creating scale buttons
         $scope.provideScale = function (num) {
@@ -98,13 +97,7 @@ angular.module('ernie-app.controllers', [])
     })
 
     // after-survey page controller
-    .controller('afterSurveyCtrl', function ($scope, $ionicPlatform, $state) {
-
-        var goHome = function() {
-            console.log("returning to intro screen");
-            $state.go('home');
-        };
-        $ionicPlatform.onHardwareBackButton(goHome);
+    .controller('afterSurveyCtrl', function ($scope, $ionicPlatform, $state, $http) {
 
         // handler for send feedback button click
         $scope.sendFeedbackEmail = function () {
