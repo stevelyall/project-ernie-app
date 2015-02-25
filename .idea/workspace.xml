@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0123902-2dc2-4541-b655-49fc93ed51d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/circle.yml" afterPath="$PROJECT_DIR$/circle.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ernie-app.iws" />
@@ -16,7 +15,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -475,7 +474,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424902556481</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="circle.yml update 6&#10;">
+      <created>1424902823160</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1424902823160</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -565,7 +570,8 @@
     <MESSAGE value="circle.yml update 3&#10;" />
     <MESSAGE value="circle.yml update 4&#10;" />
     <MESSAGE value="circle.yml update 5&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="circle.yml update 5&#10;" />
+    <MESSAGE value="circle.yml update 6&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="circle.yml update 6&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
