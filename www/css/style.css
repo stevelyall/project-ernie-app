@@ -48,11 +48,11 @@
     display: table;
     z-index: 1;
     top: 50px;
-    left: 0px;
+
 }
 
 #lowanchor {
-
+    left: 5px;
 }
 
 #midanchor {
@@ -60,8 +60,9 @@
 }
 
 #highanchor {
-    right: -40px;
+    right: 35px;
 }
+
 
 
 
