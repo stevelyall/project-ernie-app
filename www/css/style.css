@@ -49,8 +49,6 @@
     z-index: 1;
     top: 50px;
     left: 0px;
-    padding: 0px;
-    border: 1px dotted black;
 }
 
 #lowanchor {
@@ -89,6 +87,5 @@
 
 .scale-item {
     position: relative;
-    color: lightgrey;
     display: inline;
 }
