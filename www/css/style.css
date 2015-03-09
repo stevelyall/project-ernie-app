@@ -3,7 +3,7 @@
     border-width: 0px;
     background-color: transparent;
     border-radius: 50%;
-    min-width: 48px;
+    min-width: 44px;
 }
 
 /* selected survey item */
@@ -40,25 +40,32 @@
     font-size: 1.25em;
 }
 
-#anchor-container {
-    position: fixed;
-    z-index: 1;
-    bottom: calc(20vh + 50px);
-    width: 100%
-}
 
 /* anchor points */
-#lowanchor {
+
+.anchor-point {
     position: absolute;
-    display: inline;
-    left: 10px;
+    display: table;
+    z-index: 1;
+    top: 50px;
+    left: 0px;
+    padding: 0px;
+    border: 1px dotted black;
+}
+
+#lowanchor {
+
+}
+
+#midanchor {
+    left: -10px;
 }
 
 #highanchor {
-    position: absolute;
-    display: inline;
-    right: 10px;
+    right: -40px;
 }
+
+
 
 .tabs-calm {
     position: fixed;
@@ -74,4 +81,14 @@
 
 #post-feedback-msg {
     display: none;
+}
+
+#scale-container {
+    position: relative;
+}
+
+.scale-item {
+    position: relative;
+    color: lightgrey;
+    display: inline;
 }

@@ -22,7 +22,8 @@ angular.module('ernie-app.controllers', [])
         // index of selected response
         $scope.selectedResponse = -1;
 
-        console.log($scope.questions);
+        //console.log($scope.questions);
+
 
         // create model for questions
         // use http service to get data from json file
@@ -31,8 +32,24 @@ angular.module('ernie-app.controllers', [])
         });
 
         // returns an array for ng-repeat to iterate through creating scale buttons
-        $scope.provideScale = function (num) {
+        $scope.provideScaleArray = function (num) {
             return new Array(num);
+        }
+
+        $scope.findMiddleIndex = function() {
+            var scale = $scope.questions[$scope.questionIndex].scale;
+            console.log("scale " + scale);
+            var midpoint = scale/2;
+            // mid is whole number
+            if (midpoint % 1 == 0) {
+                console.log(midpoint);
+                return midpoint-1;
+            }
+            else {
+                // mid is decimal, return floor
+                console.log(midpoint);
+                return Math.floor(midpoint);
+            }
         }
 
         // handler for next button
