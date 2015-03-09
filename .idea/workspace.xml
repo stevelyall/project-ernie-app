@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0123902-2dc2-4541-b655-49fc93ed51d5" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/circle.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ernie-app.iws" />
@@ -90,8 +90,8 @@
           <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.travis.yml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.28242677" vertical-offset="0" max-vertical-offset="956">
-                  <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+                <state vertical-scroll-proportion="0.14121339" vertical-offset="0" max-vertical-offset="956">
+                  <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -143,13 +143,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="test" target-remote="origin" target-branch="testCI" />
+    </push-targets>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/www/lib/ionic/css/ionic.css" />
         <option value="$PROJECT_DIR$/www/js/aftersurvey.html" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/tests.js" />
@@ -167,6 +169,7 @@
         <option value="$PROJECT_DIR$/www/js/controllers.js" />
         <option value="$PROJECT_DIR$/www/css/style.css" />
         <option value="$PROJECT_DIR$/www/templates/surveyitem.html" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -639,7 +642,19 @@
       <option name="project" value="LOCAL" />
       <updated>1425926343724</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="travis CI">
+      <created>1425926819232</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1425926819232</updated>
+    </task>
+    <task id="LOCAL-00041" summary="travis CI test 2">
+      <created>1425927345484</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1425927345484</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -705,8 +720,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="paging through questions again with directive" />
-    <MESSAGE value="scale and button positioning fixed" />
     <MESSAGE value="ready for alpha?" />
     <MESSAGE value="back button at end of survey goes home." />
     <MESSAGE value="back button closes app, fixed splash background" />
@@ -730,7 +743,9 @@
     <MESSAGE value="protractor added 1&#10;" />
     <MESSAGE value="renamed scale provider, adjusted scale positioning&#10;" />
     <MESSAGE value="anchor points move with scale" />
-    <option name="LAST_COMMIT_MESSAGE" value="anchor points move with scale" />
+    <MESSAGE value="travis CI" />
+    <MESSAGE value="travis CI test 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="travis CI test 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1111,8 +1126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28242677" vertical-offset="0" max-vertical-offset="956">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.14121339" vertical-offset="0" max-vertical-offset="956">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
