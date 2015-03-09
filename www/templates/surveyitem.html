@@ -11,7 +11,7 @@
 
         <!--Scale-->
         <div id="scale-container" class="horizontal_center">
-            <a ng-repeat="i in provideScale(questions[questionIndex].scale) track by $index"
+            <a ng-repeat="i in provideScaleArray(questions[questionIndex].scale) track by $index"
                id="{{$index}}"
                ngSelected=""
                class="itembutton button"

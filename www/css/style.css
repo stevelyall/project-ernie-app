@@ -52,12 +52,19 @@
     position: absolute;
     display: inline;
     left: 10px;
+    top: 100%;
+    width: 100px;
+}
+
+#midanchor {
+    left: 10px;
 }
 
 #highanchor {
     position: absolute;
     display: inline;
     right: 10px;
+    top: 100%;
 }
 
 .tabs-calm {
@@ -74,4 +81,8 @@
 
 #post-feedback-msg {
     display: none;
+}
+
+#scale-container {
+    position: relative;
 }
