@@ -36,6 +36,22 @@ angular.module('ernie-app.controllers', [])
             return new Array(num);
         }
 
+        $scope.findMiddleIndex = function() {
+            var scale = $scope.questions[$scope.questionIndex].scale;
+            console.log("scale " + scale);
+            var midpoint = scale/2;
+            // mid is whole number
+            if (midpoint % 1 == 0) {
+                console.log(midpoint);
+                return midpoint-1;
+            }
+            else {
+                // mid is decimal, return floor
+                console.log(midpoint);
+                return Math.floor(midpoint);
+            }
+        }
+
         // handler for next button
         $scope.nextClick = function () {
             console.log("next Button Clicked");
