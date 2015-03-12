@@ -22,8 +22,6 @@ angular.module('ernie-app.controllers', [])
         // index of selected response
         $scope.selectedResponse = -1;
 
-        //console.log($scope.questions);
-
 
         // create model for questions
         // use http service to get data from json file
