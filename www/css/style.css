@@ -43,33 +43,13 @@
 #anchor-container {
     position: relative;
     z-index: 1;
-<<<<<<< HEAD
     bottom: 50%;
     width: 100%;
-
-=======
-    top: 50px;
-
-}
-
-#lowanchor {
-    left: 5px;
->>>>>>> master
 }
 
 #anchor-container > p {
     margin:0px;
 }
-
-<<<<<<< HEAD
-=======
-#highanchor {
-    right: 35px;
-}
-
-
->>>>>>> master
-
 
 .tabs-calm {
     position: fixed;
