@@ -20,11 +20,28 @@
             </a>
         </div>
 
+<<<<<<< HEAD
         <!-- Anchor points -->
         <div id="anchor-container" class="horizontal_center">
             <p> 0 = {{questions[questionIndex].lowanchortext}}</p>
             <p ng-if="questions[questionIndex].midanchortext != ''"> {{findMiddleIndex()}} = {{questions[questionIndex].midanchortext}}</p>
             <p> {{questions[questionIndex].scale-1}} = {{questions[questionIndex].highanchortext}}</p>
+=======
+            <div class="scale-item"
+                 ng-repeat="i in provideScaleArray(questions[questionIndex].scale) track by $index">
+                <!-- Scale Button -->
+                <a id="{{$index}}"
+                   ngSelected=""
+                   class="itembutton button"
+                   scale-directive>
+                   {{$index}}
+                </a>
+                <!--Anchor Points -->
+                <p ng-if="$first" id="lowanchor" class="anchor-point">{{questions[questionIndex].lowanchortext}}</p>
+                <p ng-if="($index == findMiddleIndex()) && questions[questionIndex].midanchortext != ''" id="midanchor" class="anchor-point">{{questions[questionIndex].midanchortext}}</p>
+                <p ng-if="$last" id="highanchor" class="anchor-point">{{questions[questionIndex].highanchortext}}</p>
+            </div>
+>>>>>>> master
 
         </div>
 
