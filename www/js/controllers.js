@@ -30,24 +30,22 @@ angular.module('ernie-app.controllers', [])
         });
 
         // returns an array for ng-repeat to iterate through creating scale buttons
-        $scope.provideScaleArray = function (num) {
-            return new Array(num);
+        $scope.provideScaleArray = function (scaleType) {
+            var zeroFive = [0,1,2,3,4,5];
+            var oneNine = [1,2,3,4,5,6,7,8,9];
+            var scaleArray;
+            (scaleType == "0-5") ? scaleArray = zeroFive : scaleArray = oneNine;
+            
+            return scaleArray;
         }
 
         $scope.findMiddleIndex = function() {
-            var scale = $scope.questions[$scope.questionIndex].scale;
-            console.log("scale " + scale);
-            var midpoint = scale/2;
-            // mid is whole number
-            if (midpoint % 1 == 0) {
-                console.log(midpoint);
-                return midpoint-1;
-            }
+           if ($scope.questions[$scope.questionIndex].scale == "0-5") {
+               return 3;
+           }
             else {
-                // mid is decimal, return floor
-                console.log(midpoint);
-                return Math.floor(midpoint);
-            }
+               return 4;
+           }
         }
 
         // handler for next button
@@ -55,7 +53,7 @@ angular.module('ernie-app.controllers', [])
             console.log("next Button Clicked");
 
             // save response
-            $scope.questions[$scope.questionIndex].response = parseInt($scope.selectedResponse) + 1;
+            $scope.questions[$scope.questionIndex].response = parseInt($scope.selectedResponse);
             console.log("response saved " + $scope.questions[$scope.questionIndex].response);
 
             // advance to next question
@@ -64,7 +62,6 @@ angular.module('ernie-app.controllers', [])
             console.log("advancing to question " + ($scope.questionIndex + 1));
 
             // check if end of survey reached
-            console.log($scope.questionIndex + 1 + " " + $scope.questions.length);
             if ($scope.questionIndex + 1 > $scope.questions.length) {
                 console.log("End of survey");
 
@@ -74,7 +71,6 @@ angular.module('ernie-app.controllers', [])
             }
 
             // clear selections
-
             for (var i in $scope.buttons) {
                 $scope.buttons[i].className = "itembutton button";
             }
@@ -84,26 +80,34 @@ angular.module('ernie-app.controllers', [])
 
         }
 
-
+// TODO fix only one selected at a time
         // handler for response button clicks
         $scope.numSelect = function numSelect(num) {
-            console.log(num + " passed to numSelect");
-            $scope.buttons = new Array($scope.questions[$scope.questionIndex].scale);
+            //console.log(num + " passed to numSelect");
+
+            var numberOfButtons = ($scope.questions[$scope.questionIndex].scale == "0-5") ? numberOfButtons = 6 : numberOfButtons = 9;
+            console.log("numberOfButtons: " + numberOfButtons);
+                $scope.buttons = new Array(numberOfButtons);
+                console.log($scope.buttons.length);
+
             for (var i = 0; i < $scope.buttons.length; i++) {
                 var button = document.getElementById(i);
+                //console.log("looping " + i + " " + button);
+
                 $scope.buttons[i] = button;
             }
-            console.log($scope.buttons);
+
+            console.log("buttons array: " + $scope.buttons);
             var buttonPushed = document.getElementById(num);
 
-            console.log("button " + buttonPushed.getAttribute("id") + " pushed");
+            console.log("button " + buttonPushed.innerHTML + " pushed");
 
             for (var i in $scope.buttons) {
                 $scope.buttons[i].className = "itembutton button";
             }
 
             buttonPushed.className += (" selecteditembutton");
-            $scope.selectedResponse = num;
+            $scope.selectedResponse = buttonPushed.innerHTML;
 
             // make next button visible
             document.getElementById("nextButton").style.display = "";
