@@ -80,15 +80,14 @@ angular.module('ernie-app.controllers', [])
 
         }
 
-// TODO fix only one selected at a time
         // handler for response button clicks
         $scope.numSelect = function numSelect(num) {
             //console.log(num + " passed to numSelect");
 
             var numberOfButtons = ($scope.questions[$scope.questionIndex].scale == "0-5") ? numberOfButtons = 6 : numberOfButtons = 9;
-            console.log("numberOfButtons: " + numberOfButtons);
+            //console.log("numberOfButtons: " + numberOfButtons);
                 $scope.buttons = new Array(numberOfButtons);
-                console.log($scope.buttons.length);
+                //console.log($scope.buttons.length);
 
             for (var i = 0; i < $scope.buttons.length; i++) {
                 var button = document.getElementById(i);
@@ -97,7 +96,7 @@ angular.module('ernie-app.controllers', [])
                 $scope.buttons[i] = button;
             }
 
-            console.log("buttons array: " + $scope.buttons);
+            //console.log("buttons array: " + $scope.buttons);
             var buttonPushed = document.getElementById(num);
 
             console.log("button " + buttonPushed.innerHTML + " pushed");
