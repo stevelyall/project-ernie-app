@@ -4,7 +4,7 @@
     {
       "id": 1,
       "question": "At the moment I feel happy",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "Very much",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "question": "At the moment I feel relaxed",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "Very much",
@@ -22,7 +22,7 @@
     {
       "id": 3,
       "question": "At the moment I feel angry",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "Very much",
@@ -31,7 +31,7 @@
     {
       "id": 4,
       "question": "At the moment I feel stressed",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "Very much",
@@ -40,7 +40,7 @@
     {
       "id": 5,
       "question": "At the moment I feel anxious",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "Very much",
@@ -49,7 +49,7 @@
     {
       "id": 6,
       "question": "At the moment I feel depressed",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "Very much",
@@ -58,7 +58,7 @@
     {
       "id": 7,
       "question": "Since the previous signal I have allowed or accepted my feelings",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "A lot",
@@ -67,7 +67,7 @@
     {
       "id": 8,
       "question": "Since the previous signal I have changed the way I think about what caused my feelings",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "A lot",
@@ -76,7 +76,7 @@
     {
       "id": 9,
       "question": "Since the previous signal I have criticised myself for my feelings",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "A lot",
@@ -85,7 +85,7 @@
     {
       "id": 10,
       "question": "Since the previous signal I couldn’t stop thinking about my feelings",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "A lot",
@@ -94,7 +94,7 @@
     {
       "id": 11,
       "question": "Since the previous signal I have talked about my feelings with others",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "A lot",
@@ -103,7 +103,7 @@
     {
       "id": 12,
       "question": "Since the previous signal I have avoided expressing my emotions",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "A lot",
@@ -112,7 +112,7 @@
     {
       "id": 13,
       "question": "Since the previous signal I have engaged in activities to distract myself from my feelings",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "A lot",
@@ -121,7 +121,7 @@
     {
       "id": 14,
       "question": "Since the previous signal I have come up with ideas to fix or change the problem that caused my feelings",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "A lot",
@@ -130,7 +130,7 @@
     {
       "id": 15,
       "question": "Since the previous signal I have pushed my feelings down or put them out of my mind",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "A lot",
@@ -139,7 +139,7 @@
     {
       "id": 16,
       "question": "Since the previous signal, I have wanted my pleasant feelings to...",
-      "scale": 10,
+      "scale": "1-9",
       "lowanchortext": "Decrease a lot",
       "midanchortext": "Stay the same",
       "highanchortext": "Increase a lot",
@@ -148,7 +148,7 @@
     {
       "id": 17,
       "question": "Since the previous signal, I have wanted my unpleasant feelings to...",
-      "scale": 10,
+      "scale": "1-9",
       "lowanchortext": "Decrease a lot",
       "midanchortext": "Stay the same",
       "highanchortext": "Increase a lot",
@@ -157,7 +157,7 @@
     {
       "id": 18,
       "question": "Since the previous signal, I have wanted to control my feelings so that I can achieve some other goal",
-      "scale": 5,
+      "scale": "0-5",
       "lowanchortext": "Not at all",
       "midanchortext": "",
       "highanchortext": "Very much",
