@@ -29,6 +29,12 @@ angular.module('ernie-app.controllers', [])
             $scope.questions = data.items;
         });
 
+
+        /**
+         * Creates an array used by the ng-repeat in the surveyitem template to create response buttons.
+         * @param scaleType the type of scale for the current question
+         * @returns an array of intergers from 0-5 or 1-9
+         */
         // returns an array for ng-repeat to iterate through creating scale buttons
         $scope.provideScaleArray = function (scaleType) {
             var zeroFive = [0,1,2,3,4,5];
@@ -39,16 +45,28 @@ angular.module('ernie-app.controllers', [])
             return scaleArray;
         }
 
+        /**
+         * For each question, determines the midpoint of the scale to be displayed in the legend.
+         * Precondition: questions model loaded with http service
+         * @returns integer midpoint of the scale
+         */
         $scope.findMiddleIndex = function() {
-           if ($scope.questions[$scope.questionIndex].scale == "0-5") {
+            if ($scope.questions[$scope.questionIndex] == undefined) {
+               return;
+           }
+            // midpoint for 0-5 scale, if needed
+            if ($scope.questions[$scope.questionIndex].scale == "0-5") {
                return 3;
            }
             else {
+                // 1-9 midpoint
                return 4;
            }
         }
 
-        // handler for next button
+        /**
+         * Handler for Next button clicks.
+         */
         $scope.nextClick = function () {
             console.log("next Button Clicked");
 
@@ -80,7 +98,10 @@ angular.module('ernie-app.controllers', [])
 
         }
 
-        // handler for response button clicks
+        /**
+         * Handler for response button clicks. Controls button style on selection and picking responses.
+         * @param num element id of the button clicked
+         */
         $scope.numSelect = function numSelect(num) {
             //console.log(num + " passed to numSelect");
 
@@ -89,23 +110,29 @@ angular.module('ernie-app.controllers', [])
                 $scope.buttons = new Array(numberOfButtons);
                 //console.log($scope.buttons.length);
 
+            // array of button elements for the current question
             for (var i = 0; i < $scope.buttons.length; i++) {
                 var button = document.getElementById(i);
                 //console.log("looping " + i + " " + button);
-
                 $scope.buttons[i] = button;
             }
 
             //console.log("buttons array: " + $scope.buttons);
+
+            // button clicked by user
             var buttonPushed = document.getElementById(num);
 
             console.log("button " + buttonPushed.innerHTML + " pushed");
 
+            // show all buttons as deselected
             for (var i in $scope.buttons) {
                 $scope.buttons[i].className = "itembutton button";
             }
 
+            // apply selected style to button clicked by user
             buttonPushed.className += (" selecteditembutton");
+
+            //
             $scope.selectedResponse = buttonPushed.innerHTML;
 
             // make next button visible
@@ -131,8 +158,10 @@ angular.module('ernie-app.controllers', [])
             }
         }
 
+        /**
+         *  Hides feedback prompt and button, shows thank you message.
+         */
         var feedbackDone = function () {
-            // hide feedback prompt and button, show new message
             document.getElementById("feedback-prompt").style.display = "none";
             document.getElementById("send-feedback-button").style.display = "none";
             document.getElementById("post-feedback-msg").style.display = "block";
