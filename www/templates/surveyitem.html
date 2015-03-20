@@ -3,7 +3,7 @@
         <h1 class="title">Sample Survey</h1>
     </ion-header-bar>
 
-    <ion-content ng-controller="surveyCtrl" scroll="false">
+    <ion-content ng-controller="surveyController" scroll="false">
         <!--Question items presented here-->
         <div class="survey-card" class="horizontal_center" >
             <p id="question-text">{{questions[questionIndex].question}}</p>
@@ -23,7 +23,6 @@
             </div>
             <!-- scale for 1-9-->
             <div ng-if="questions[questionIndex].scale =='1-9'">
-                <p>1-9 scale</p>
                 <a ng-repeat="i in provideScaleArray(questions[questionIndex].scale) track by $index"
                    id="{{$index}}"
                    ngSelected=""
