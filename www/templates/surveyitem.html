@@ -23,7 +23,6 @@
             </div>
             <!-- scale for 1-9-->
             <div ng-if="questions[questionIndex].scale =='1-9'">
-                <p>1-9 scale</p>
                 <a ng-repeat="i in provideScaleArray(questions[questionIndex].scale) track by $index"
                    id="{{$index}}"
                    ngSelected=""
