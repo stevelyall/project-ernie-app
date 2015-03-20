@@ -1,6 +1,6 @@
-angular.module('ernie-app.controllers',[])// survey controller
+angular.module('ernie-app.controllers')
     // survey controller
-    .controller('surveyCtrl', function ($scope, $http, $state) {
+    .controller('surveyController', function ($scope, $http, $state) {
         {
             // reference to response buttons
             $scope.buttons;
@@ -10,7 +10,6 @@ angular.module('ernie-app.controllers',[])// survey controller
 
             // index of selected response
             $scope.selectedResponse = -1;
-
 
             // create model for questions
             // use http service to get data from json file
