@@ -1,20 +1,17 @@
 angular.module('ernie-app.controllers')
     .controller('disclaimerPrivacyController', function ($scope, $state, $ionicPopup) {
 
-        $scope.licenseAccepted = false;
-        $scope.privacyAcceoted = true;
-
-        if ($scope.licenseAccepted) {
+        if (window.localStorage['licenseAccepted'] == 'true') {
             $state.go('privacy');
         }
-        if ($scope.privacyAccepted) {
+        if (window.localStorage['privacyAccepted'] == 'true') {
             $state.go('survey');
         }
 
         $scope.disclaimerContinueButtonOnClick = function () {
             console.log("agree is checked? " + document.getElementById("disclaimerAcceptCheckbox").checked);
             if (document.getElementById("disclaimerAcceptCheckbox").checked == true) {
-                $scope.licenseAccepted = true;
+                window.localStorage['licenseAccepted'] = 'true';
                 $state.go('privacy');
             }
             else {

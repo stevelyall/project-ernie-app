@@ -71,8 +71,15 @@
     position: relative;
 }
 
-#acceptContainer {
+/*
+=================
+Styles for disclaimer/privacy policy/consent
+=================
+*/
+#accept-container {
     position: relative;
+    width: 100%;
+    height: 50px;
 }
 
 /* change color for checkbox to match*/
@@ -83,14 +90,10 @@
 
 .accept-checkbox {
     position: absolute;
-    left: 25vw;
+    left: 40px;
 }
 
 #continueButton {
-    position: relative;
-    right: 0px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    position: absolute;
+    right: 10px;
 }
