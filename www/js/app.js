@@ -34,6 +34,17 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers'])
                 templateUrl: 'templates/home.html'
             })
 
+            // disclaimer
+            .state('disclaimer', {
+                url: '/disclaimer',
+                templateUrl: 'templates/disclaimer.html'
+            })
+            // privacy policy
+            .state('privacy', {
+                url: '/privacyPolicy',
+                templateUrl: 'templates/privacyPolicy.html'
+            })
+
             // state for survey
             .state('survey', {
                 url: "/survey",

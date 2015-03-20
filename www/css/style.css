@@ -70,3 +70,27 @@
 #scale-container {
     position: relative;
 }
+
+#acceptContainer {
+    position: relative;
+}
+
+/* change color for checkbox to match*/
+.checkbox input:checked:before {
+    background: #11c1f3;
+    border-color: #ddd;
+}
+
+.accept-checkbox {
+    position: absolute;
+    left: 25vw;
+}
+
+#continueButton {
+    position: relative;
+    right: 0px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

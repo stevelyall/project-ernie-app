@@ -1,0 +1,67 @@
+<ion-view view-title="Disclaimer">
+    <ion-header-bar class="bar bar-header bar-calm">
+        <h1 class="title">Disclaimer</h1>
+    </ion-header-bar>
+
+    <ion-content ng-controller="disclaimerPrivacyController">
+
+        <div id="welcome-prompt" class="card">
+            <div class="item item-divider">
+                You must accept the license agreement before continuing:
+            </div>
+            <div class="item item-text-wrap">
+                <p>
+                <b>The MIT License (MIT)</b>
+                </p>
+                <br>
+                <p>
+                <b>Copyright (C) 2015 eraproject.ca</b>
+                </p>
+                <br>
+                <p>
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+                </p>
+                <br>
+                <p>
+                The above copyright notice and this permission notice shall be included in
+                all copies or substantial portions of the Software.
+                </p>
+                <br>
+                <p>
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+                THE SOFTWARE.
+                </p>
+
+                    <ul class="accept-checkbox">
+                        <li class="item item-checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox" id="disclaimerAcceptCheckbox">
+                            </label>
+                            I Accept
+                        </li>
+                    </ul>
+
+                    <button id="continueButton" class="button button-calm" ng-click="disclaimerContinueButtonOnClick()">Continue</button>
+
+            </div>
+        </div>
+
+
+
+        <!--&lt;!&ndash;Test button to go to after survey &ndash;&gt;-->
+        <!--<button class="button button-calm horizontal_center" ui-sref="afterSurvey">Test</button>-->
+
+        <!-- Additional button to access email feedback without survey, for testing-->
+        <!-- <button class="button button-calm" ui-sref="afterSurvey">Test Feedback</button> -->
+    </ion-content>
+</ion-view>
