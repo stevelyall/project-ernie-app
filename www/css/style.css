@@ -80,6 +80,7 @@ Styles for disclaimer/privacy policy/consent
     position: relative;
     width: 100%;
     height: 50px;
+    margin-top: 10px
 }
 
 /* change color for checkbox to match*/
@@ -96,6 +97,16 @@ Styles for disclaimer/privacy policy/consent
 #continueButton {
     position: absolute;
     right: 10px;
+}
+
+#acceptButton {
+    position: absolute;
+    right: 50px;
+}
+
+#declineButton {
+    position: absolute;
+    left: 50px;
 }
 
 /*

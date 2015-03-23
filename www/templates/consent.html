@@ -1,0 +1,39 @@
+<ion-view view-title="Consent">
+    <ion-header-bar class="bar bar-header bar-calm">
+        <h1 class="title">Informed Consent</h1>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <div id="welcome-prompt" class="card">
+            <div class="item item-divider">
+                Inportant consent information for participation:
+            </div>
+
+            <div class="item item-text-wrap">
+                <p>
+                <b>Consent information goes here</b>
+                </p>
+                <br>
+                <p>
+                You can't participate if you can't participate. You also shouldn't participate if you don't like participating in things. Also please don't participate if you are a monkey.
+
+                <div id="accept-container">
+                    <button id="declineButton" class="button button-calm" ng-click="consentDeclineButtonOnClick()">Decline</button>
+                    <button id="acceptButton" class="button button-calm" ng-click="consentAcceptButtonOnClick()">Accept</button>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!--&lt;!&ndash;Test button to go to after survey &ndash;&gt;-->
+        <!--<button class="button button-calm horizontal_center" ui-sref="afterSurvey">Test</button>-->
+
+        <!-- Additional button to access email feedback without survey, for testing-->
+        <!-- <button class="button button-calm" ui-sref="afterSurvey">Test Feedback</button> -->
+    </ion-content>
+</ion-view>

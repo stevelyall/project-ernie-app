@@ -1,5 +1,5 @@
 angular.module('ernie-app.controllers')
-    .controller('disclaimerPrivacyController', function ($scope, $state, $ionicPopup, $stateParams) {
+    .controller('disclaimerPrivacyController', function ($scope, $state, $ionicPopup) {
 
         $scope.disclaimerContinueButtonOnClick = function () {
             if (window.localStorage["disclaimerAccepted"] = 'true') {
@@ -36,8 +36,7 @@ angular.module('ernie-app.controllers')
             if (document.getElementById("privacyAcceptCheckbox").checked == true) {
                 window.localStorage['privacyAccepted'] = 'true';
                 console.log(window.localStorage['privacyAccepted'] + " privacy accepted?");
-                $scope.reload;
-                $state.transitionTo('home', null, {'reload':true});
+                $state.go('home');
             }
             else {
                 // An alert dialog
