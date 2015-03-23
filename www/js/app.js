@@ -29,33 +29,45 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers'])
         $stateProvider
 
             // initial state
-            .state('home', {
-                url: "/home",
-                templateUrl: 'templates/home.html'
+            .state('init', {
+                url: "/init",
+                templateUrl: "templates/init.html",
+                controller: "initController"
             })
 
             // disclaimer
             .state('disclaimer', {
                 url: '/disclaimer',
-                templateUrl: 'templates/disclaimer.html'
+                templateUrl: 'templates/disclaimer.html',
+                controller: 'disclaimerPrivacyController'
             })
             // privacy policy
             .state('privacy', {
                 url: '/privacyPolicy',
-                templateUrl: 'templates/privacyPolicy.html'
+                templateUrl: 'templates/privacyPolicy.html',
+                controller: 'disclaimerPrivacyController'
+            })
+
+            // home
+            .state('home', {
+                url: "/home",
+                templateUrl: 'templates/home.html',
+                controller: 'homeController'
             })
 
             // state for survey
             .state('survey', {
                 url: "/survey",
-                templateUrl: 'templates/surveyitem.html'
+                templateUrl: 'templates/surveyitem.html',
+                controller: 'surveyController'
             })
 
             // state for finished survey
             .state('afterSurvey', {
                 url: "/aftersurvey",
-                templateUrl: 'templates/aftersurvey.html'
+                templateUrl: 'templates/aftersurvey.html',
+                controller: 'afterSurveyController'
             })
 
-        $urlRouterProvider.otherwise('/templates/home.html');
+        $urlRouterProvider.otherwise('/templates/init.html');
     });

@@ -97,3 +97,13 @@ Styles for disclaimer/privacy policy/consent
     position: absolute;
     right: 10px;
 }
+
+/*
+===============
+Styles for alert box button color
+===============
+*/
+.button.button-positive {
+    background: #11c1f3;
+    border-color: #ddd;
+}
