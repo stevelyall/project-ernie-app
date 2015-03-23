@@ -1,9 +1,10 @@
 angular.module('ernie-app.controllers')
     .controller('initController', function ($scope, $state) {
-        window.localStorage.clear();
+        //window.localStorage.clear();
 
-        console.log(window.localStorage['licenseAccepted'] + " license accepted?");
-        console.log(window.localStorage['privacyAccepted'] + " privacy accepted?");
+        console.log("license?" + window.localStorage['licenseAccepted']);
+        console.log("privacy?" + window.localStorage['privacyAccepted']);
+        console.log("consent?" + window.localStorage['consentAccepted']);
 
         if (window.localStorage['licenseAccepted'] == undefined) {
             console.log('license not accepted, going to disclaimer state');
