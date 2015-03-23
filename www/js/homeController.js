@@ -29,11 +29,9 @@ angular.module('ernie-app.controllers')
                     $scope.needSetupAlert().show();
                 }
                 else {
-                    $scope.startSurveyButtonOnClick = function () {
-                        console.log("startsurveybutton clicked");
+                    console.log("startsurveybutton clicked");
                         // TODO alert with survey directions?
-                        $state.go('survey');
-                    }
+                    $state.go('survey');
                 }
             }
     });
