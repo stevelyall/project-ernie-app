@@ -16,6 +16,7 @@
   },
   "cordovaPlugins": [
     "https://github.com/jcjee/email-composer.git",
-    "https://github.com/katzer/cordova-plugin-email-composer.git"
+    "https://github.com/katzer/cordova-plugin-email-composer.git",
+    "org.apache.cordova.device"
   ]
 }
