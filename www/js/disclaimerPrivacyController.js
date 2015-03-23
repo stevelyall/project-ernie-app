@@ -1,11 +1,9 @@
 angular.module('ernie-app.controllers')
+    // TODO alert box doesn't return to disclaimer or privacy
+    // TODO continue goes to home instead of privacy?
     .controller('disclaimerPrivacyController', function ($scope, $state, $ionicPopup, $stateParams) {
 
         $scope.disclaimerContinueButtonOnClick = function () {
-            if (window.localStorage["disclaimerAccepted"] = 'true') {
-                $state.go('home');
-            }
-            console.log("agree is checked? " + document.getElementById("disclaimerAcceptCheckbox").checked);
             if (document.getElementById("disclaimerAcceptCheckbox").checked == true) {
                 window.localStorage['licenseAccepted'] = 'true';
                 console.log(window.localStorage['licenseAccepted'] + " license accepted?");
@@ -28,16 +26,10 @@ angular.module('ernie-app.controllers')
         };
 
         $scope.privacyContinueButtonOnClick = function () {
-            if (window.localStorage["privacyAccepted"] = 'true') {
-                $state.go('home');
-            }
-            console.log("agree is checked? " + document.getElementById("privacyAcceptCheckbox").checked);
-
             if (document.getElementById("privacyAcceptCheckbox").checked == true) {
                 window.localStorage['privacyAccepted'] = 'true';
                 console.log(window.localStorage['privacyAccepted'] + " privacy accepted?");
-                $scope.reload;
-                $state.transitionTo('home', null, {'reload':true});
+                $state.go('home');
             }
             else {
                 // An alert dialog
