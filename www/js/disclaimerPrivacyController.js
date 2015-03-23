@@ -1,5 +1,5 @@
 angular.module('ernie-app.controllers')
-    .controller('disclaimerPrivacyController', function ($scope, $state, $ionicPopup, $stateParams) {
+    .controller('disclaimerPrivacyController', function ($scope, $state, $ionicPopup) {
 
         $scope.disclaimerContinueButtonOnClick = function () {
             if (document.getElementById("disclaimerAcceptCheckbox").checked == true) {
