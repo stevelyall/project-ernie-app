@@ -1,6 +1,4 @@
 angular.module('ernie-app.controllers')
-    // TODO alert box doesn't return to disclaimer or privacy
-    // TODO continue goes to home instead of privacy?
     .controller('disclaimerPrivacyController', function ($scope, $state, $ionicPopup, $stateParams) {
 
         $scope.disclaimerContinueButtonOnClick = function () {
