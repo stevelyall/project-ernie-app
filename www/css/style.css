@@ -70,3 +70,40 @@
 #scale-container {
     position: relative;
 }
+
+/*
+=================
+Styles for disclaimer/privacy policy/consent
+=================
+*/
+#accept-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+/* change color for checkbox to match*/
+.checkbox input:checked:before {
+    background: #11c1f3;
+    border-color: #ddd;
+}
+
+.accept-checkbox {
+    position: absolute;
+    left: 40px;
+}
+
+#continueButton {
+    position: absolute;
+    right: 10px;
+}
+
+/*
+===============
+Styles for alert box button color
+===============
+*/
+.button.button-positive {
+    background: #11c1f3;
+    border-color: #ddd;
+}
