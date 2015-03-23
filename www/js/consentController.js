@@ -1,8 +1,8 @@
 angular.module('ernie-app.controllers')
-    .controller('consentController', function ($scope, $state, $ionicPopup, $stateProvider) {
+    .controller('consentController', function ($scope, $state, $ionicPopup) {
         $scope.consentAcceptButtonOnClick = function () {
-            window.localStorage['consentAccepted'] = 'true';
             $state.go('home');
+            // TODO instead of going home, begin setup
         };
         $scope.consentDeclineButtonOnClick = function () {
             $scope.consentDeclinedAlert = function () {
