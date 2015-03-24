@@ -129,3 +129,21 @@ Styles for setup screen button positioning
     position: relative;
     top: 30vh
 }
+
+#setupBackButton {
+    top: 10px;
+}
+
+/*
+=================
+Styles for demographics view
+=================
+*/
+
+#demographicsContinueButton {
+    margin-top: 10px;
+}
+
+#otherEthnicityTextBox.list {
+    margin-bottom: 0px;
+}

@@ -7,6 +7,8 @@
 
 angular.module('ernie-app.controllers')
     .controller('consentController', function ($scope, $state, $ionicPopup) {
+        console.log(window.localStorage['consentAccepted']);
+        console.log(window.localStorage['demographicsCollected']);
 
         // consent already accepted, hide back and change accept to back
         if (window.localStorage['consentAccepted']) {
@@ -14,11 +16,18 @@ angular.module('ernie-app.controllers')
             document.getElementById("acceptButton").innerHTML = "Back";
         }
 
-        // accept, go to setup
+        // continuing from consent screen
         $scope.consentAcceptButtonOnClick = function () {
             window.localStorage['consentAccepted'] = 'true';
-            $state.go('setup');
-        };
+            //if demographics have not been collected, do that
+            if (window.localStorage['demographicsCollected'] == undefined) {
+                $state.go('demographics');
+
+            }
+            else
+                $state.go('setup');
+
+            }
 
         // decline, show alert and close app
         $scope.consentDeclineButtonOnClick = function () {

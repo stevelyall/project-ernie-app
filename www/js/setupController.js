@@ -3,7 +3,6 @@ angular.module('ernie-app.controllers')
 
         // view consent information when consent button is clicked
         $scope.consentButtonOnClick = function () {
-            console.log("consent button click");
             $state.go('consent');
         }
 

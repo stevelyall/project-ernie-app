@@ -55,6 +55,13 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers', 'ngCord
                 controller: 'consentController'
             })
 
+            // demographics
+            .state('demographics', {
+                url: '/demographics',
+                templateUrl: 'templates/demographics.html',
+                controller: 'demographicsController'
+            })
+            
             // home
             .state('home', {
                 url: "/home",
