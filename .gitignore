@@ -4,6 +4,8 @@
 node_modules/
 platforms/
 plugins/
+*.apk
+*.keystore
 
 # JetBrains Files #
 ###################
