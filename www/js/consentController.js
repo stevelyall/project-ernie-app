@@ -19,9 +19,9 @@ angular.module('ernie-app.controllers')
         // continuing from consent screen
         $scope.consentAcceptButtonOnClick = function () {
             window.localStorage['consentAccepted'] = 'true';
-            //if demographics have not been collected, do that
+            //if participant id and demographics have not been collected, do that
             if (window.localStorage['demographicsCollected'] == undefined) {
-                $state.go('demographics');
+                $state.go('participantId');
 
             }
             else
@@ -44,4 +44,6 @@ angular.module('ernie-app.controllers')
             };
             $scope.consentDeclinedAlert().show();
         }
+
+
     });

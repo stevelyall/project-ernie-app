@@ -1,12 +1,12 @@
 angular.module('ernie-app.controllers')
-    .controller('demographicsController', function ($scope, $state, $ionicPopup) {
+    .controller('demographicsController', function ($scope, $state, $ionicPopup, $ionicModal) {
 
         document.getElementById("otherEthnicityTextBox").style.display = "none";
 
         // display text box to specify other ethnicity
         document.getElementById("ethnicitySelect").onchange = function () {
             console.log("selection changed");
-            if (this.value=="Other") {
+            if (this.value == "Other") {
                 document.getElementById("otherEthnicityTextBox").style.display = "block";
             }
             else {
