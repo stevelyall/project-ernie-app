@@ -1,3 +1,8 @@
+/**
+ * Controller for disclaimer/license and privacy policy views.
+ * Checks that these items are accepted by user before continuing, saves in local storage.
+ */
+
 angular.module('ernie-app.controllers')
     .controller('disclaimerPrivacyController', function ($scope, $state, $ionicPopup) {
 

@@ -27,7 +27,7 @@ angular.module('ernie-app.controllers')
             else
                 $state.go('setup');
 
-            }
+        }
 
         // decline, show alert and close app
         $scope.consentDeclineButtonOnClick = function () {

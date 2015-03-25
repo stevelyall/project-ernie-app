@@ -20,7 +20,7 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers', 'ngCord
 
         // back button closes app in all states
         $ionicPlatform.registerBackButtonAction(function () {
-                ionic.Platform.exitApp();
+            ionic.Platform.exitApp();
         }, 100);
     })
 
@@ -61,7 +61,6 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers', 'ngCord
                 templateUrl: 'templates/participantid.html',
                 controller: 'participantIdController'
             }
-
         )
 
             // demographics
@@ -70,7 +69,7 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers', 'ngCord
                 templateUrl: 'templates/demographics.html',
                 controller: 'demographicsController'
             })
-            
+
             // home
             .state('home', {
                 url: "/home",

@@ -1,6 +1,5 @@
 {
-  "items":
-  [
+  "items": [
     {
       "id": 1,
       "question": "At the moment I feel happy",
@@ -163,7 +162,6 @@
       "highanchortext": "Very much",
       "response": 0
     }
-
   ]
 }
 

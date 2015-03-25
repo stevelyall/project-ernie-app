@@ -15,7 +15,7 @@ angular.module('ernie-app.controllers')
                     // compose email
                     window.plugins.emailComposer.showEmailComposerWithCallback(feedbackDone(), subject, body, to, null, null, true, null, null);
                 }
-            // TODO remove de.appplant.cordova.plugin.email-composer
+                // TODO remove de.appplant.cordova.plugin.email-composer
             }
 
             /**

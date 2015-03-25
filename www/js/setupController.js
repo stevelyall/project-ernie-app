@@ -1,3 +1,7 @@
+/**
+ * Controller for setup menu.
+ */
+
 angular.module('ernie-app.controllers')
     .controller('setupController', function ($scope, $state, $ionicPopup) {
 
