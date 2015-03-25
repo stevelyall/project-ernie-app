@@ -66,13 +66,12 @@ angular.module('ernie-app.controllers')
 
                 // save response
 
-                window.localStorage["q" + $scope.questionIndex] = parseInt($scope.selectedResponse);
-                console.log("response saved " + window.localStorage["q" + $scope.questionIndex]);
+                window.localStorage["q" + $scope.questions[$scope.questionIndex].id] = parseInt($scope.selectedResponse);
+                console.log("response saved " + window.localStorage["q" + $scope.questions[$scope.questionIndex].id]);
 
                 // advance to next question
                 $scope.selectedResponse = -1;
                 $scope.questionIndex++;
-                console.log("advancing to question " + ($scope.questionIndex + 1));
 
                 // check if end of survey reached
                 if ($scope.questionIndex + 1 > $scope.questions.length) {

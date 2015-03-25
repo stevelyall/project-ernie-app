@@ -2,7 +2,10 @@ angular.module('ernie-app.controllers')
     // after-survey page controller
     .controller('afterSurveyController', function ($scope, $ionicPlatform, $state, $http) {
         {
-            console.log("sup");
+            for (var i = 1; i < 15; i++) {
+                console.log("q" + i + " response is: " + window.localStorage["q" + i]);
+            }
+
             // handler for send feedback button click
             $scope.sendFeedbackEmail = function () {
                 console.log("feedback button clicked");
