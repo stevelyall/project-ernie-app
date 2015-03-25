@@ -55,11 +55,33 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers', 'ngCord
                 controller: 'consentController'
             })
 
+            // participant ID
+            .state('participantId', {
+                url: '/participantId',
+                templateUrl: 'templates/participantid.html',
+                controller: 'participantIdController'
+            }
+
+        )
+
+            // demographics
+            .state('demographics', {
+                url: '/demographics',
+                templateUrl: 'templates/demographics.html',
+                controller: 'demographicsController'
+            })
+            
             // home
             .state('home', {
                 url: "/home",
                 templateUrl: 'templates/home.html',
                 controller: 'homeController'
+            })
+
+            .state('setup', {
+                url: "setup",
+                templateUrl: "templates/setup.html",
+                controller: "setupController"
             })
 
             // state for survey

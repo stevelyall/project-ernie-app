@@ -12,7 +12,13 @@ angular.module('ernie-app.controllers')
         console.log("privacy?" + window.localStorage['privacyAccepted']);
         console.log("consent?" + window.localStorage['consentAccepted']);
         // TODO view license and privacy in about section
-            $scope.startSurveyButtonOnClick = function () {
+
+
+        $scope.setupButtonOnClick = function () {
+            $state.go('setup');
+        }
+
+        $scope.startSurveyButtonOnClick = function () {
 
                 if (window.localStorage['consentAccepted'] != 'true') {
                     console.log("can't start survey");

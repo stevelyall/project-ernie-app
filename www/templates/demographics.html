@@ -1,0 +1,66 @@
+<ion-view view-title="Demographics">
+    <ion-header-bar class="bar bar-header bar-calm">
+        <h1 class="title">Please answer the following questions:</h1>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <div class="list list-inset">
+
+           <!--age-->
+            <label class="item item-input">
+                <span class="input-label">Age</span>
+                <input id="ageInput" type="number">
+            </label>
+
+            <!--gender-->
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Gender
+                </div>
+                <select id="genderInput">
+                    <option>Male</option>
+                    <option selected>Female</option>
+                    <option>Other</option>
+                </select>
+            </label>
+
+            <!--ethnicity-->
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Ethnicity
+                </div>
+                <select id="ethnicitySelect">
+                    <option>White</option>
+                    <option>Black</option>
+                    <option>Asian</option>
+                    <option>Hispanic</option>
+                    <option>Aboriginal</option>
+                    <option>Bi-racial</option>
+                    <option>Other</option>
+                </select>
+            </label>
+
+            <!--text box shown when other ethnicity is selected-->
+            <div id="otherEthnicityTextBox" class="list">
+                <label class="item item-input">
+                    <span class="input-label">Please specify:</span>
+                    <input type="text">
+                </label>
+            </div>
+
+            <button id="demographicsContinueButton" class="button button-calm horizontal_center" ng-click="demographicsContinueButtonOnClick()" >Continue</button>
+
+
+
+            <!--&lt;!&ndash;Test button to go to after survey &ndash;&gt;-->
+        <!--<button class="button button-calm horizontal_center" ui-sref="afterSurvey">Test</button>-->
+
+        <!-- Additional button to access email feedback without survey, for testing-->
+        <!-- <button class="button button-calm" ui-sref="afterSurvey">Test Feedback</button> -->
+
+        <!-- TODO about menu for privacy and disclaimer? -->
+        <!--<button id="aboutButton" class="button button-calm horizontal_center" ng-click="" >About</button>-->
+
+    </ion-content>
+</ion-view>

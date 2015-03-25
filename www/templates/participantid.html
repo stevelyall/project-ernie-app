@@ -1,0 +1,36 @@
+<ion-view view-title="Demographics">
+    <ion-header-bar class="bar bar-header bar-calm">
+        <h1 class="title">Participant ID:</h1>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <div class="list list-inset">
+            <label class="item item-radio">
+                <input type="radio" name="group" id="participantIdButton">
+                <div class="item-content">
+                    I was given a participant ID
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+            <label class="item item-radio">
+                <input type="radio" name="group" id="noParticipantIdButton">
+                <div class="item-content">
+                    I was not given a participant ID
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
+        </div>
+        <!--// TODO hide bottom bit unless checked. logic-->
+        <div id="participantIdFromUser" class="list">
+            <label class="item item-input">
+                <span class="input-label">Enter your ID:</span>
+                <input id="participantIdInput" type="text">
+            </label>
+        </div>
+
+
+        <button class="button button-calm horizontal_center" ng-click="participantIdSubmitButtonOnClick()">Done</button>
+    </ion-content>
+
+</ion-view>

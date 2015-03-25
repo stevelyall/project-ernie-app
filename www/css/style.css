@@ -118,3 +118,32 @@ Styles for alert box button color
     background: #11c1f3;
     border-color: #ddd;
 }
+
+/*
+================
+Styles for setup screen button positioning
+================
+*/
+
+#setup-button-container {
+    position: relative;
+    top: 30vh
+}
+
+#setupBackButton {
+    top: 10px;
+}
+
+/*
+=================
+Styles for demographics view
+=================
+*/
+
+#demographicsContinueButton {
+    margin-top: 10px;
+}
+
+#otherEthnicityTextBox.list {
+    margin-bottom: 0px;
+}
