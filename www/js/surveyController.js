@@ -1,7 +1,6 @@
 /**
  * Controller for survey. Manages questions, scale, anchor points and collects responses.
  */
-// TODO save response in local storage rather than json
 // TODO get begin and end timestamps and save in local storage
 
 angular.module('ernie-app.controllers')
