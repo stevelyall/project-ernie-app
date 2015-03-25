@@ -15,8 +15,7 @@ angular.module('ernie-app.controllers')
                     // compose email
                     window.plugins.emailComposer.showEmailComposerWithCallback(feedbackDone(), subject, body, to, null, null, true, null, null);
                 }
-                // TODO remove de.appplant.cordova.plugin.email-composer
-            }
+            };
 
             /**
              *  Hides feedback prompt and button, shows thank you message.

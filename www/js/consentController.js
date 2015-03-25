@@ -27,7 +27,7 @@ angular.module('ernie-app.controllers')
             else
                 $state.go('setup');
 
-        }
+        };
 
         // decline, show alert and close app
         $scope.consentDeclineButtonOnClick = function () {
@@ -39,7 +39,6 @@ angular.module('ernie-app.controllers')
                 alert.then(function (res) {
                     console.log('alert dismissed');
                     ionic.Platform.exitApp();
-                    // TODO bug? reopening app crashes first time?
                 });
             };
             $scope.consentDeclinedAlert().show();

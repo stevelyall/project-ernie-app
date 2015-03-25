@@ -41,9 +41,9 @@
 }
 
 #anchor-container {
-    position: relative;
+    position: fixed;
     z-index: 1;
-    bottom: 50%;
+    bottom: 30%;
     width: 100%;
 }
 
