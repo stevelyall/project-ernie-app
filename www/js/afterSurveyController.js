@@ -4,6 +4,9 @@
 angular.module('ernie-app.controllers')
     .controller('afterSurveyController', function ($scope, $ionicPlatform, $state, $http) {
         {
+            // hide exit button
+            document.getElementById("exitButton").style.display = "none";
+
             // get response data from local storage
             var response = {
                 participantId: window.localStorage['participantId'],
@@ -45,7 +48,6 @@ angular.module('ernie-app.controllers')
             };
             postResponse();
 
-
             /**
              * Handler for feedback button click.
              * Uses Email Composer with Attachments Plugin:
@@ -65,12 +67,15 @@ angular.module('ernie-app.controllers')
             };
 
             /**
-             *  Hides feedback prompt and button, shows thank you message.
+             *  Hides feedback prompt and button, shows thank you message and exit button.
              */
             var feedbackDone = function () {
                 document.getElementById("feedback-prompt").style.display = "none";
                 document.getElementById("send-feedback-button").style.display = "none";
                 document.getElementById("post-feedback-msg").style.display = "block";
+
+                document.getElementById("exitButton").style.display = "block";
+                document.getElementById("exitButton").addEventListener("click", ionic.Platform.exitApp());
             }
         }
     });
