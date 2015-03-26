@@ -18,7 +18,7 @@ angular.module('ernie-app.controllers')
                 document.getElementById("otherEthnicityTextBox").style.display = "none";
             }
 
-        }
+        };
 
         $scope.demographicsContinueButtonOnClick = function () {
             var age = document.getElementById("ageInput").value;
@@ -35,7 +35,7 @@ angular.module('ernie-app.controllers')
                     });
                     alert.then(function (res) {
                         console.log('alert dismissed');
-                        return;
+
                     });
                 };
                 $scope.alert().show();
@@ -44,10 +44,12 @@ angular.module('ernie-app.controllers')
                 // store in local storage
                 window.localStorage['age'] = age;
                 window.localStorage['gender'] = gender;
-                window.localStorage['ethnicitySelected'] = ethnicitySelected;
-                window.localStorage['otherEthnicity'] = otherEthnicity;
+                window.localStorage['ethnicity'] = ethnicitySelected;
+                if (ethnicitySelected == "Other") {
+                    window.localStorage['ethnicity'] = otherEthnicity;
+                }
                 window.localStorage['demographicsCollected'] = "true";
-                console.log(window.localStorage['age'] + "\n" + window.localStorage['gender'] + "\n" + window.localStorage['ethnicitySelected'] + "\n" + window.localStorage['otherEthnicity']);
+                console.log(window.localStorage['age'] + "\n" + window.localStorage['gender'] + "\n" + window.localStorage['ethnicity']);
 
                 // TODO where should this really go? Set locations
                 $state.go('home');

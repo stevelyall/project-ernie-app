@@ -1,7 +1,6 @@
 /**
  * Controller for survey. Manages questions, scale, anchor points and collects responses.
  */
-// TODO save response in local storage rather than json
 // TODO get begin and end timestamps and save in local storage
 
 angular.module('ernie-app.controllers')
@@ -37,7 +36,7 @@ angular.module('ernie-app.controllers')
                 (scaleType == "0-5") ? scaleArray = zeroFive : scaleArray = oneNine;
 
                 return scaleArray;
-            }
+            };
 
             /**
              * For each question, determines the midpoint of the scale to be displayed in the legend.
@@ -56,7 +55,7 @@ angular.module('ernie-app.controllers')
                     // 1-9 midpoint
                     return 4;
                 }
-            }
+            };
 
             /**
              * Handler for Next button clicks.
@@ -65,13 +64,13 @@ angular.module('ernie-app.controllers')
                 console.log("next Button Clicked");
 
                 // save response
-                $scope.questions[$scope.questionIndex].response = parseInt($scope.selectedResponse);
-                console.log("response saved " + $scope.questions[$scope.questionIndex].response);
+
+                window.localStorage["q" + $scope.questions[$scope.questionIndex].id] = parseInt($scope.selectedResponse);
+                console.log("response saved " + window.localStorage["q" + $scope.questions[$scope.questionIndex].id]);
 
                 // advance to next question
                 $scope.selectedResponse = -1;
                 $scope.questionIndex++;
-                console.log("advancing to question " + ($scope.questionIndex + 1));
 
                 // check if end of survey reached
                 if ($scope.questionIndex + 1 > $scope.questions.length) {
@@ -90,7 +89,7 @@ angular.module('ernie-app.controllers')
                 // hide next button
                 document.getElementById("nextButton").style.display = "none";
 
-            }
+            };
 
             /**
              * Handler for response button clicks. Controls button style on selection and picking responses.
