@@ -17,7 +17,7 @@ angular.module('ernie-app.controllers')
             for (var i = 1; i < 15; i++) {
                 console.log("q" + i + " response is: " + window.localStorage["q" + i]);
 
-                response["q" + i + "_response"] = window.localStorage["q" + i];
+                response["q" + i + "response"] = window.localStorage["q" + i];
                 console.log(response["q" + i + "_response"]);
 
             }
