@@ -12,10 +12,9 @@ angular.module('ernie-app.controllers')
 
         $scope.setupButtonOnClick = function () {
             $state.go('setup');
-        }
+        };
 
         $scope.startSurveyButtonOnClick = function () {
-
             // ensure consent accepted before starting survey
             if (window.localStorage['consentAccepted'] != 'true') {
                 console.log("can't start survey");
@@ -33,7 +32,10 @@ angular.module('ernie-app.controllers')
             }
             else {
                 console.log("startsurveybutton clicked");
-                // TODO alert with survey directions?
+
+                console.log(new Date());
+                window.localStorage['startDate'] = new Date().toLocaleString();
+                console.log(window.localStorage['startTime']);
                 $state.go('survey');
             }
         }

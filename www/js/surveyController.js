@@ -53,7 +53,7 @@ angular.module('ernie-app.controllers')
                 }
                 else {
                     // 1-9 midpoint
-                    return 4;
+                    return 5;
                 }
             };
 

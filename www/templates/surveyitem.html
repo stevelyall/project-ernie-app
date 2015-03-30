@@ -33,14 +33,18 @@
             </div>
         </div>
 
-        <!-- Anchor points -->
+        <!-- Anchor points-->
         <div id="anchor-container" class="horizontal_center">
-            <p> 0 = {{questions[questionIndex].lowanchortext}}</p>
+            <!-- 0-5 low-->
+            <p ng-if="questions[questionIndex].scale =='0-5'"> 0 = {{questions[questionIndex].lowanchortext}}</p>
+            <!-- 1-9 low -->
+            <p ng-if="questions[questionIndex].scale =='1-9'"> 1 = {{questions[questionIndex].lowanchortext}}</p>
+
+            <!-- mid -->
             <p ng-if="questions[questionIndex].midanchortext != ''"> {{findMiddleIndex()}} = {{questions[questionIndex].midanchortext}}</p>
+            <!-- high -->
             <p> {{questions[questionIndex].scale.substr(2,1)}} = {{questions[questionIndex].highanchortext}}</p>
-
         </div>
-
 
         <!-- Navigation -->
         <button class="button button-calm" style="display:none" id="nextButton" ng-click="nextClick()">
