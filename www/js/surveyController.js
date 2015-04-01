@@ -114,7 +114,7 @@ angular.module('ernie-app.controllers')
                 // button clicked by user
                 var buttonPushed = document.getElementById(num);
 
-                console.log("button " + buttonPushed.innerHTML + " pushed");
+                //console.log("button " + buttonPushed.innerHTML + " pushed");
 
                 // show all buttons as deselected
                 for (var i in $scope.buttons) {

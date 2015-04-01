@@ -8,6 +8,12 @@ angular.module('ernie-app.controllers')
             window.localStorage['endTime'] = new Date().toUTCString();
             console.log(window.localStorage['endTime']);
 
+            var surveyNum = parseInt(window.localStorage['numSurveysCompleted']) + 1;
+            console.log("survey #" + surveyNum + " completed");
+
+            // increment survey counter
+            window.localStorage['numSurveysCompleted'] = (surveyNum).toString();
+            console.log("surveys completed: " + window.localStorage['numSurveysCompleted']);
 
             // hide exit button
             document.getElementById("exitButton").style.display = "none";
@@ -18,10 +24,10 @@ angular.module('ernie-app.controllers')
                 age: window.localStorage['age'],
                 gender: window.localStorage['gender'],
                 ethnicity: window.localStorage['ethnicity'],
-                responseNum: 1, // TODO count responses
+                responseNum: surveyNum.toString(),
                 startTime: window.localStorage['startTime'],
                 endTime: window.localStorage['endTime'],
-                location: window.localStorage['location'] // TODO location
+                location: window.localStorage['location']
             };
             for (var i = 1; i < 19; i++) {
                 console.log("\nq" + i + "response: " + window.localStorage["q" + i]);

@@ -4,6 +4,8 @@
 
 angular.module('ernie-app.controllers')
     .controller('locationSelectController', function ($scope, $state, $ionicPopup) {
+        console.log("surveys completed: " + window.localStorage['numSurveysCompleted']);
+
         for (var i = 1; i < 5; i++) {
             document.getElementById("loc" + i).innerHTML = window.localStorage["loc" + i];
             document.getElementById("loc" + i).value = window.localStorage["loc" + i];

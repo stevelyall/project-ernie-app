@@ -30,6 +30,7 @@ angular.module('ernie-app.controllers')
 
             }
 
+            window.localStorage['numSurveysCompleted'] = '0';
             window.localStorage['locsDefined'] = 'true';
             // go to main menu
             $state.go('home');
