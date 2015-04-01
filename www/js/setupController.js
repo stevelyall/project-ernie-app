@@ -8,11 +8,10 @@ angular.module('ernie-app.controllers')
         // view consent information when consent button is clicked
         $scope.consentButtonOnClick = function () {
             $state.go('consent');
-        }
+        };
 
         // TODO schedule
 
-        // TODO locations
 
         // TODO notifications
     });

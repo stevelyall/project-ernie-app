@@ -3,7 +3,7 @@
  */
 
 angular.module('ernie-app.controllers')
-    .controller('demographicsController', function ($scope, $state, $ionicPopup, $ionicModal) {
+    .controller('demographicsController', function ($scope, $state, $ionicPopup) {
 
         //hide other text box
         document.getElementById("otherEthnicityTextBox").style.display = "none";
@@ -51,8 +51,8 @@ angular.module('ernie-app.controllers')
                 window.localStorage['demographicsCollected'] = "true";
                 console.log(window.localStorage['age'] + "\n" + window.localStorage['gender'] + "\n" + window.localStorage['ethnicity']);
 
-                // TODO where should this really go? Set locations
-                $state.go('home');
+                // go to location definition state
+                $state.go('locationDefine');
             }
         }
 

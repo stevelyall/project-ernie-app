@@ -70,6 +70,13 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers', 'ngCord
                 controller: 'demographicsController'
             })
 
+            // location definition
+            .state('locationDefine', {
+                url: '/locationDefine',
+                templateUrl: 'templates/locationdefine.html',
+                controller: 'locationDefineController'
+            })
+
             // home
             .state('home', {
                 url: "/home",
@@ -95,7 +102,7 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers', 'ngCord
                 url: "/aftersurvey",
                 templateUrl: 'templates/aftersurvey.html',
                 controller: 'afterSurveyController'
-            })
+            });
 
         $urlRouterProvider.otherwise('/templates/init.html');
     });
