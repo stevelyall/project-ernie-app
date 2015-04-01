@@ -33,9 +33,10 @@ angular.module('ernie-app.controllers')
             else {
                 console.log("startsurveybutton clicked");
 
-                console.log(new Date());
-                window.localStorage['startDate'] = new Date().toLocaleString();
+                // record starting timestamp
+                window.localStorage['startTime'] = new Date().toUTCString();
                 console.log(window.localStorage['startTime']);
+
                 $state.go('survey');
             }
         }

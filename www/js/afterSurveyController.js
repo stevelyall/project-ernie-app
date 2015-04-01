@@ -4,6 +4,11 @@
 angular.module('ernie-app.controllers')
     .controller('afterSurveyController', function ($scope, $ionicPlatform, $state, $http) {
         {
+            // record finish timestamp
+            window.localStorage['endTime'] = new Date().toUTCString();
+            console.log(window.localStorage['endTime']);
+
+
             // hide exit button
             document.getElementById("exitButton").style.display = "none";
 
@@ -14,7 +19,7 @@ angular.module('ernie-app.controllers')
                 gender: window.localStorage['gender'],
                 ethnicity: window.localStorage['ethnicity'],
                 responseNum: 1, // TODO count responses
-                startTime: window.localStorage['startTime'], // TODO timestamps
+                startTime: window.localStorage['startTime'],
                 endTime: window.localStorage['endTime'],
                 location: window.localStorage['location'] // TODO location
             };
