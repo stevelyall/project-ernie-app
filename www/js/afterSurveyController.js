@@ -23,7 +23,8 @@ angular.module('ernie-app.controllers')
                 endTime: window.localStorage['endTime'],
                 location: window.localStorage['location'] // TODO location
             };
-            for (var i = 1; i < 15; i++) {
+            for (var i = 1; i < 19; i++) {
+                console.log("\nq" + i + "response: " + window.localStorage["q" + i]);
                 response["q" + i + "response"] = window.localStorage["q" + i];
             }
 

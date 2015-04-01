@@ -65,7 +65,7 @@ angular.module('ernie-app.controllers')
                 // save response
 
                 window.localStorage["q" + $scope.questions[$scope.questionIndex].id] = parseInt($scope.selectedResponse);
-                console.log("response saved " + window.localStorage["q" + $scope.questions[$scope.questionIndex].id]);
+                console.log("question " + ($scope.questionIndex + 1) + " response saved " + window.localStorage["q" + $scope.questions[$scope.questionIndex].id]);
 
                 // advance to next question
                 $scope.selectedResponse = -1;
