@@ -6,7 +6,7 @@ angular.module('ernie-app.controllers')
     .controller('locationDefineController', function ($scope, $state, $ionicPopup) {
 
         $scope.locationDefineSubmitButtonOnClick = function () {
-
+            console.log("clicked");
             // get values
             for (var i = 1; i < 5; i++) {
                 console.log(i);
@@ -30,6 +30,7 @@ angular.module('ernie-app.controllers')
 
             }
 
+            window.localStorage['locsDefined'] = 'true';
             // go to main menu
             $state.go('home');
 

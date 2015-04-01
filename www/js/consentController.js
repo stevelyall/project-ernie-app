@@ -20,7 +20,7 @@ angular.module('ernie-app.controllers')
         $scope.consentAcceptButtonOnClick = function () {
             window.localStorage['consentAccepted'] = 'true';
             //if participant id and demographics have not been collected, do that
-            if (window.localStorage['demographicsCollected'] == undefined) {
+            if (window.localStorage['demographicsCollected'] == undefined || window.localStorage['locsDefined'] == undefined) {
                 $state.go('participantId');
 
             }

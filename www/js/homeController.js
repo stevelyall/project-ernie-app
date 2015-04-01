@@ -30,14 +30,27 @@ angular.module('ernie-app.controllers')
                 };
                 $scope.needSetupAlert().show();
             }
-            else {
+
+            // locations not defined, setup not complete
+            if (window.localStorage['locsDefined'] == undefined) {
+                console.log("locs not set");
+                $scope.needSetupAlert = function () {
+                    var alert = $ionicPopup.alert({
+                        title: 'Cannot Continue',
+                        template: "Please complete the set-up before continuing with the survey."
+                    });
+                    alert.then(function (res) {
+                        console.log('alert dismissed');
+                        $state.go('participantId');
+                    });
+                };
+                $scope.needSetupAlert().show();
+            }
+
+
                 console.log("startsurveybutton clicked");
 
-                // record starting timestamp
-                window.localStorage['startTime'] = new Date().toUTCString();
-                console.log(window.localStorage['startTime']);
 
-                $state.go('survey');
-            }
+            $state.go('locationSelect');
         }
     });

@@ -90,6 +90,12 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers', 'ngCord
                 controller: "setupController"
             })
 
+            .state('locationSelect', {
+                url: '/locationSelect',
+                templateUrl: 'templates/locationselect.html',
+                controller: 'locationSelectController'
+            })
+
             // state for survey
             .state('survey', {
                 url: "/survey",
