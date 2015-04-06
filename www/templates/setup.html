@@ -3,18 +3,20 @@
         <h1 class="title">Set-Up</h1>
     </ion-header-bar>
 
-    <ion-pane>
+    <ion-content scroll="false">
 
-        <div class="setup-buttons-container">
-            <div class="horizontal_center setup-options-container">
-                <button id="consentButton" class="button button-calm" ng-click="consentButtonOnClick()">Consent</button>
-                <!--<button id="scheduleButton" class="button button-calm" ng-click="" >Schedule</button>-->
-                <!--<button id="locationsButton" class="button button-calm" ng-click="" >Locations</button>-->
-                <!--<button id="notifications" class="button button-calm" ng-click="">Notifications</button>-->
-                <br>
-            </div>
-            <button id="setupBackButton" class="button button-calm horizontal_center" ui-sref="home">Back</button>
+
+        <div class="setup-button-container horizontal_center">
+            <button id="consentButton" class="button button-calm" ng-click="consentButtonOnClick()">Consent</button>
+            <br>
+            <button id="setupBackButton" class="button button-calm" ui-sref="home">Back</button>
+
+            <!--<button id="scheduleButton" class="button button-calm" ng-click="" >Schedule</button>-->
+            <!--<button id="locationsButton" class="button button-calm" ng-click="" >Locations</button>-->
+            <!--<button id="notifications" class="button button-calm" ng-click="">Notifications</button>-->
+
         </div>
+
 
     </ion-content>
 </ion-view>

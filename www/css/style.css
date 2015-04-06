@@ -157,17 +157,13 @@ Styles for setup screen button positioning
 ================
 */
 
-.setup-buttons-container {
-    position: fixed;
-    width: 100%;
-    top: 50%;
-    background-color: #33cd5f;
+.setup-button-container {
+    position: relative;
+    top: 120px;
 }
 
-.setup-options-container {
-    /*position: relative;*/
-    background-color: #0a9ec7;
-    margin-bottom: 20px;
+#setupBackButton {
+    margin-top: 20px;
 }
 
 /*
