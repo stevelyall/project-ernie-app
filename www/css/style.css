@@ -1,5 +1,22 @@
-/* borderless button for survey item */
+.horizontal_center {
+    /* for horizontal_center class */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 
+.tabs-calm {
+    display: none;
+}
+
+/*
+=================
+Styles for survey scale buttons
+=================
+*/
+
+/* borderless button for survey item */
 .itembutton {
     border-width: 0px;
     background-color: transparent;
@@ -25,25 +42,37 @@
     top: -5px;
 }
 
+/*
+=================
+Styles for survey view
+=================
+*/
+
 #nextButton {
     position:fixed;
-    bottom: 10vh;
-    right: 10vh;
-    z-index: 1;
-}
-
-.horizontal_center {
-    /* for horizontal_center class */
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    bottom: 25px;
+    right: 30px;
 }
 
 /* card holds question in survey view*/
-.survey-card {
-    margin: 20px;
-    padding: 5px;
+.question-container-card {
+    position: fixed;
+    width: 100%;
+    top: 22%;
+    padding: 0px 15px;
+}
+
+#scale-container {
+    position: relative;
+    top: 45%;
+    z-index: 1;
+}
+
+#anchor-container {
+    position: fixed;
+    z-index: 1;
+    bottom: 72px;
+    width: 100%;
 }
 
 #question-text {
@@ -51,21 +80,17 @@
     font-size: 1.25em;
 }
 
-#anchor-container {
-    position: fixed;
-    z-index: 1;
-    bottom: 30%;
-    width: 100%;
-}
+
 
 #anchor-container > p {
     margin:0px;
 }
 
-.tabs-calm {
-    position: fixed;
-    bottom: 0px;
-}
+/*
+=================
+Styles for post-survey feedback view
+=================
+*/
 
 .feedback-buttons {
     margin-left: auto;
@@ -76,10 +101,6 @@
 
 #post-feedback-msg {
     display: none;
-}
-
-#scale-container {
-    position: relative;
 }
 
 /*
