@@ -85,9 +85,16 @@ angular.module('ernie-app.controllers')
                 document.getElementById("feedback-prompt").style.display = "none";
                 document.getElementById("send-feedback-button").style.display = "none";
                 document.getElementById("post-feedback-msg").style.display = "block";
-
                 document.getElementById("exitButton").style.display = "block";
-                document.getElementById("exitButton").addEventListener("click", ionic.Platform.exitApp());
+
+
+            };
+
+            /**
+             * Exit button, becomes visible after sending app feedback.
+             */
+            $scope.exitButtonOnClick = function () {
+                ionic.Platform.exitApp();
             }
         }
     });

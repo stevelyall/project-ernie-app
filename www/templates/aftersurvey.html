@@ -11,14 +11,17 @@
                 Help us improve the experience! We would love to hear from you!
             </div>
         </div>
-        <button id="send-feedback-button" class="button button-calm" ng-click="sendFeedbackEmail()">Tell us what you think!</button>
-        <div class="horizontal_center">
-            <button id="exitButton" class="button button-calm" ng-click="setupButtonOnClick()">Exit</button>
-        </div>
+
         <div id="post-feedback-msg" class="card">
             <div class="item item-text-wrap">
                 Thank you for your feedback!
             </div>
         </div>
+
+        <button id="send-feedback-button" class="button button-calm feedback-buttons" ng-click="sendFeedbackEmail()">
+            Tell us what you think!
+        </button>
+        <button id="exitButton" class="button button-calm feedback-buttons" ng-click="exitButtonOnClick()">Exit</button>
+
     </ion-content>
 </ion-view>
