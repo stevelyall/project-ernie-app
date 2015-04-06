@@ -7,6 +7,14 @@
     min-width: 48px;
 }
 
+.button.activated {
+    border-width: 5px;
+    border-color: transparent;
+    position: relative;
+    top: -5px;
+    box-shadow: none;
+}
+
 /* selected survey item */
 .selecteditembutton {
     border-width: 5px;
