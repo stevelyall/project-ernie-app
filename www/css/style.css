@@ -7,7 +7,7 @@
     min-width: 48px;
 }
 
-.button.activated {
+.itembutton.activated {
     border-width: 5px;
     border-color: transparent;
     position: relative;
