@@ -58,7 +58,9 @@ angular.module('ernie-app.controllers')
                 });
 
             };
-            postResponse();
+
+            // data collection temporarily disabled pending ethics?
+            //postResponse();
 
             /**
              * Handler for feedback button click.
