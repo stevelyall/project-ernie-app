@@ -20,6 +20,6 @@ Additional information on the Ionic CLI can be found at http://ionicframework.co
 As the user progresses through the survey, responses are stored in local storage. After the survey has been completed, the participant's demographic information and responses are stored in a JSON string and ~~sent to the server using the HTTP POST method~~.
 
 ## Dependencies Included
-*Apache Cordova Device Plugin - used to access UUID for the device, which is used as a substitute for a researcher-provided participant id. https://github.com/apache/cordova-plugin-device
-*Email Composer with Attchments Plugin - used to compose a blank email message for beta testers to send feedback
+ * Apache Cordova Device Plugin - used to access UUID for the device, which is used as a substitute for a researcher-provided participant id. https://github.com/apache/cordova-plugin-device
+ * Email Composer with Attchments Plugin - used to compose a blank email message for beta testers to send feedback
 
