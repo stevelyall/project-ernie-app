@@ -60,7 +60,7 @@ angular.module('ernie-app.controllers')
             };
 
             // data collection temporarily disabled pending ethics?
-            postResponse();
+            //postResponse();
 
             /**
              * Handler for feedback button click.
