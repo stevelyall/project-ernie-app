@@ -14,7 +14,6 @@ angular.module('ernie-app.controllers')
             $state.go('setup');
         };
 
-        // TODO limit number of surveys that can be completed in beta?
         $scope.startSurveyButtonOnClick = function () {
             // ensure consent accepted before starting survey
             if (window.localStorage['consentAccepted'] != 'true') {

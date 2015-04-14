@@ -6,6 +6,7 @@ platforms/
 plugins/
 *.apk
 *.keystore
+*.sh
 
 # JetBrains Files #
 ###################
