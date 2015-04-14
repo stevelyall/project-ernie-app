@@ -1,4 +1,5 @@
-# project-ernie-app
+# ERA Project Mobile App
+
 Mobile application for Portable Research Data Acquisition System.
 
 Problem Statement
