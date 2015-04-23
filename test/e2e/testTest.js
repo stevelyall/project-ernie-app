@@ -19,8 +19,8 @@ describe('disclaimer', function () {
         var continueButton = element(by.id('continueButton'));
         continueButton.click();
         var title = element(by.css('h1.title'));
-        //expect(title.getText()).toEqual('Privacy Policy');
-        //TODO check pp statew
-    })
+        expect(browser.getCurrentUrl()).toEqual('http://localhost:8100/#/privacyPolicy');
+    });
+
 
 });
