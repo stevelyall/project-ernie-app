@@ -1,5 +1,7 @@
 exports.config = {
     capabilities: {
+        // You can use other browsers
+        // like firefox, phantoms, safari, IE (-_-)
         'browserName': 'chrome'
     },
     specs: [
@@ -12,6 +14,6 @@ exports.config = {
     },
     allScriptsTimeout: 20000,
     onPrepare: function(){
-        browser.driver.get('http://localhost:3000');
+        browser.driver.get('http://localhost:8100');
     }
 };
