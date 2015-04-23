@@ -126,7 +126,7 @@ Styles for disclaimer/privacy policy/consent
     left: 40px;
 }
 
-#continueButton {
+.continueButton {
     position: absolute;
     right: 10px;
 }
