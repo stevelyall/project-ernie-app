@@ -16,7 +16,7 @@ var app = angular.module('ernie-app', ['ionic', 'ernie-app.controllers', 'ngCord
             }
         });
 
-        // back button closes app in all states
+        // back button closes app by default
         $ionicPlatform.registerBackButtonAction(function () {
             ionic.Platform.exitApp();
         }, 100);

@@ -4,8 +4,27 @@
 
 angular.module('ernie-app.controllers')
     // survey controller
-    .controller('surveyController', function ($scope, $http, $state) {
+    .controller('surveyController', function ($scope, $http, $state, $ionicPlatform, $ionicPopup) {
         {
+            // back button confirms exit
+            $ionicPlatform.registerBackButtonAction(function () {
+                $scope.backButtonPushedAlert = function () {
+                    var confirmPopup = $ionicPopup.confirm({
+                        title: 'Quit?',
+                        template: 'Are you sure you want to exit the app?'
+                    });
+                    confirmPopup.then(function (res) {
+                        if (res) {
+                            ionic.Platform.exitApp();
+                        } else {
+                            console.log('alert dismissed');
+                        }
+                    });
+                };
+                $scope.backButtonPushedAlert().show();
+
+            }, 100);
+
             // reference to response buttons
             $scope.buttons;
 
