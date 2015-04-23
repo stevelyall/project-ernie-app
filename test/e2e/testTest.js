@@ -20,6 +20,7 @@ describe('disclaimer', function () {
         continueButton.click();
         var title = element(by.css('h1.title'));
         //expect(title.getText()).toEqual('Privacy Policy');
+        //TODO check pp statew
     })
 
 });
