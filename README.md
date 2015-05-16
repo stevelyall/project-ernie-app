@@ -23,5 +23,5 @@ As the user progresses through the survey, responses are stored in local storage
  * Apache Cordova Device Plugin - used to access UUID for the device, which is used as a substitute for a researcher-provided participant id. https://github.com/apache/cordova-plugin-device
  * Email Composer with Attchments Plugin - used to compose a blank email message for beta testers to send feedback. https://github.com/jcjee/email-composer
  * ngCordova - extensions for AngularJS for Cordova. http://ngcordova.com/
- * Ionic Keyboard Plugin - allows for easier control of device keyboard- https://github.com/driftyco/ionic-plugin-keyboard
+ * Ionic Keyboard Plugin - allows for easier control of device keyboard. https://github.com/driftyco/ionic-plugin-keyboard
 
