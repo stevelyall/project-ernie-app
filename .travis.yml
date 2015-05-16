@@ -14,6 +14,7 @@ before_install:
 install:
 - echo "Install stage"
 - sudo apt-get install nodejs
+- sudo apt-get install npm
 - sudo apt-get update -y
 #- sudo apt-get install -y nodejs imagemagick
 - sudo npm -g install cordova ionic bower gulp cordova-gen
