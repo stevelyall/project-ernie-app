@@ -7,49 +7,54 @@
 
         <div class="list list-inset">
 
-           <!--age-->
-            <label class="item item-input">
-                <span class="input-label">Age</span>
-                <input id="ageInput" type="number">
-            </label>
-
-            <!--gender-->
-            <label class="item item-input item-select">
-                <div class="input-label">
-                    Gender
-                </div>
-                <select id="genderInput">
-                    <option>Male</option>
-                    <option selected>Female</option>
-                    <option>Other</option>
-                </select>
-            </label>
-
-            <!--ethnicity-->
-            <label class="item item-input item-select">
-                <div class="input-label">
-                    Ethnicity
-                </div>
-                <select id="ethnicitySelect">
-                    <option>White</option>
-                    <option>Black</option>
-                    <option>Asian</option>
-                    <option>Hispanic</option>
-                    <option>Aboriginal</option>
-                    <option>Bi-racial</option>
-                    <option>Other</option>
-                </select>
-            </label>
-
-            <!--text box shown when other ethnicity is selected-->
-            <div id="otherEthnicityTextBox" class="list">
+            <form name="demographicform" ng-controller="demographicsController">
+                <!--age-->
                 <label class="item item-input">
-                    <span class="input-label">Please specify:</span>
-                    <input type="text">
+                    <span class="input-label">Age</span>
+                    <input id="ageInput" type="number" min="0" required ng-model="participant.age">
                 </label>
-            </div>
 
-            <button id="demographicsContinueButton" class="button button-calm horizontal_center" ng-click="demographicsContinueButtonOnClick()" >Continue</button>
+                <!--gender-->
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Gender
+                    </div>
+                    <select id="genderInput" required ng-model="participant.gender">
+                        <option>Male</option>
+                        <option selected>Female</option>
+                        <option>Other</option>
+                    </select>
+                </label>
 
+                <!--ethnicity-->
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Ethnicity
+                    </div>
+                    <select id="ethnicitySelect" required ng-model="participant.ethnicity">
+                        <option>White</option>
+                        <option>Black</option>
+                        <option>Asian</option>
+                        <option>Hispanic</option>
+                        <option>Aboriginal</option>
+                        <option>Bi-racial</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+
+                <!--text box shown when other ethnicity is selected-->
+                <div id="otherEthnicityTextBox" class="list" ng-show="participant.ethnicity == 'Other'">
+                    <label class="item item-input">
+                        <span class="input-label">Please specify:</span>
+                        <input type="text" ng-required="participant.ethnicity == 'Other'"
+                               ng-model="participant.otherEthnicity">
+                    </label>
+                </div>
+                <button ng-disabled="demographicform.$invalid"
+                        class="button button-calm horizontal_center continueButton"
+                        ng-click="demographicsContinueButtonOnClick()">Continue
+                </button>
+            </form>
+        </div>
     </ion-content>
 </ion-view>

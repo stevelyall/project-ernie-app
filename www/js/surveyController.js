@@ -36,7 +36,7 @@ angular.module('ernie-app.controllers')
 
             // create model for questions
             // use http service to get data from json file
-            $scope.questions = $http.get('js/questions.json').success(function (data) {
+            $http.get('js/questionsModel.json').success(function (data) {
                 $scope.questions = data.items;
             });
 

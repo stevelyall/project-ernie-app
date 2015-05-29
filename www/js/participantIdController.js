@@ -4,55 +4,40 @@
  */
 
 angular.module('ernie-app')
-    .controller('participantIdController', function ($scope, $state, $ionicPopup, $cordovaDevice) {
+    .controller('participantIdController', function ($rootScope, $scope, $state, $ionicPopup, $http, $cordovaDevice) {
+        // create model for participant
+        $http.get('js/participantModel.json').success(function (data) {
+            $rootScope.participant = data.participant;
+        });
 
-        // hide text box
-        document.getElementById("participantIdFromUser").style.display = "none";
-
-
-        // display text box for the user to provide their Id
-        var checkButtons = function () {
-            if (document.getElementById("participantIdButton").checked) {
-                document.getElementById("participantIdFromUser").style.display = "block";
-            }
-            else {
-                document.getElementById("participantIdFromUser").style.display = "none";
-            }
-        }
-        document.getElementById("participantIdButton").addEventListener("click", checkButtons);
-        document.getElementById("noParticipantIdButton").addEventListener("click", checkButtons);
-
+        $scope.participantIDForm = {};
 
         $scope.participantIdSubmitButtonOnClick = function () {
-            var participantId;
 
-            // use UUID for device, provided by cordova device
+            // not given an id? use UUID for device, provided by cordova device
             if (document.getElementById("noParticipantIdButton").checked) {
+                console.log("no participant id");
                 document.addEventListener("deviceready", function () {
-                    participantId = $cordovaDevice.getUUID();
+                    console.log("device id is " + $cordovaDevice.getUUID());
+                    $rootScope.participant.participantId = $cordovaDevice.getUUID();
+                });
+            }
+
+
+            // handle participant id left blank
+            if ($scope.participantIDForm.$invalid) {
+                console.log("form invalid");
+                $ionicPopup.alert({
+                    title: 'Invalid Participant ID',
+                    template: "Please enter your participant ID.",
+                    okText: "Try Again"
                 });
             }
             else {
-                // use user provided id
-                participantId = document.getElementById("participantIdInput").value;
-
-                // handle participant id left blank
-                if (participantId.length < 1) {
-                    $scope.alert = function () {
-                        var alert = $ionicPopup.alert({
-                            title: 'Cannot be blank',
-                            template: "Please enter your participant ID."
-                        });
-                        alert.then(function (res) {
-                            console.log('alert dismissed');
-                            return;
-                        });
-                    };
-                    $scope.alert().show();
-                }
+                console.log("participant Id is: " + $rootScope.participant.participantId);
+                //window.localStorage['participantId'] = $scope.participant.participantId;
+                //console.log("participant Id stored in local storage is: " + window.localStorage['participantId']);
+                $state.go('demographics');
             }
-            window.localStorage['participantId'] = participantId;
-            console.log("participant Id is: " + window.localStorage['participantId']);
-            $state.go('demographics');
         }
     });

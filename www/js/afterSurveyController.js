@@ -18,17 +18,25 @@ angular.module('ernie-app.controllers')
             // hide exit button
             document.getElementById("exitButton").style.display = "none";
 
-            // get response data from local storage
+            // get participant data to include
+            $scope.participant = JSON.parse(localStorage.getItem('participant'));
+            console.log("retrieved from local storage:");
+            console.log($scope.participant);
+
             var response = {
-                participantId: window.localStorage['participantId'],
-                age: window.localStorage['age'],
-                gender: window.localStorage['gender'],
-                ethnicity: window.localStorage['ethnicity'],
+                participantId: $scope.participant.participantId,
+                age: $scope.participant.age,
+                gender: $scope.participant.gender,
+                ethnicity: $scope.participant.ethnicity,
                 responseNum: surveyNum.toString(),
                 startTime: window.localStorage['startTime'],
                 endTime: window.localStorage['endTime'],
                 location: window.localStorage['location']
             };
+            if ($scope.participant.ethnicity == "Other") {
+                response.ethnicity = $scope.participant.otherEthnicity;
+            }
+
             for (var i = 1; i < 19; i++) {
                 console.log("\nq" + i + "response: " + window.localStorage["q" + i]);
                 response["q" + i + "response"] = window.localStorage["q" + i];
@@ -59,7 +67,7 @@ angular.module('ernie-app.controllers')
 
             };
 
-            // data collection temporarily disabled pending ethics?
+            // data collection temporarily disable pending ethics?
             postResponse();
 
             /**

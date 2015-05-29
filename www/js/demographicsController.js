@@ -3,55 +3,26 @@
  */
 
 angular.module('ernie-app.controllers')
-    .controller('demographicsController', function ($scope, $state, $ionicPopup) {
-
-        //hide other text box
-        document.getElementById("otherEthnicityTextBox").style.display = "none";
-
-        // display text box if other is selected
-        document.getElementById("ethnicitySelect").onchange = function () {
-            console.log("selection changed");
-            if (this.value == "Other") {
-                document.getElementById("otherEthnicityTextBox").style.display = "block";
-            }
-            else {
-                document.getElementById("otherEthnicityTextBox").style.display = "none";
-            }
-
-        };
+    .controller('demographicsController', function ($rootScope, $scope, $state, $ionicPopup) {
 
         $scope.demographicsContinueButtonOnClick = function () {
-            var age = document.getElementById("ageInput").value;
-            var gender = document.getElementById("genderInput").value;
-            var ethnicitySelected = document.getElementById("ethnicitySelect").value;
-            var otherEthnicity = document.getElementById("otherEthnicityTextBox").value;
 
-            // age left blank, show alert
-            if (age == undefined || age < 1) {
-                $scope.alert = function () {
-                    var alert = $ionicPopup.alert({
-                        title: 'Age Incorrect',
-                        template: "Please enter your age in years. ex) 24"
-                    });
-                    alert.then(function (res) {
-                        console.log('alert dismissed');
-
-                    });
-                };
-                $scope.alert().show();
+            if ($scope.demographicform.$invalid) {
+                $ionicPopup.alert({
+                    title: "Age Incorrect",
+                    template: "Please enter your age in years. ex) 24",
+                    okText: "Try Again"
+                });
             }
             else {
-                // store in local storage
-                window.localStorage['age'] = age;
-                window.localStorage['gender'] = gender;
-                window.localStorage['ethnicity'] = ethnicitySelected;
-                if (ethnicitySelected == "Other") {
-                    window.localStorage['ethnicity'] = otherEthnicity;
-                }
-                window.localStorage['demographicsCollected'] = "true";
-                console.log(window.localStorage['age'] + "\n" + window.localStorage['gender'] + "\n" + window.localStorage['ethnicity']);
+                console.log($rootScope.participant);
+                localStorage.setItem('participant', JSON.stringify($rootScope.participant));
 
-                // go to location definition state
+                console.log("localstorage now contains:");
+                var retrieved = JSON.parse(localStorage.getItem('participant'));
+                console.log(retrieved);
+
+                //go to location definition state
                 $state.go('locationDefine');
             }
         }

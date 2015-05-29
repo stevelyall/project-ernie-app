@@ -3,35 +3,31 @@
  */
 
 angular.module('ernie-app.controllers')
-    .controller('locationDefineController', function ($scope, $state, $ionicPopup) {
+    .controller('locationDefineController', function ($scope, $http, $state, $ionicPopup) {
+
+        // create model for locations
+        $http.get('js/participantModel.json').success(function (data) {
+            $scope.locations = data.locations;
+        });
 
         $scope.locationDefineSubmitButtonOnClick = function () {
-            console.log("clicked");
-            // get values
-            for (var i = 1; i < 5; i++) {
-                console.log(i);
-                var value = document.getElementById("loc" + i + "Input").value;
-                if (value != undefined && value != "") {
-                    window.localStorage['loc' + i] = document.getElementById("loc" + i + "Input").value;
-                } else {
-                    $scope.alert = function () {
-                        var alert = $ionicPopup.alert({
-                            title: 'Invalid Location ' + i,
-                            template: "You must enter a name for all four locations."
-                        });
-                        alert.then(function (res) {
-                            console.log('alert dismissed');
 
-                        });
-                    };
-                    $scope.alert().show();
-
-                }
-
+            if ($scope.locationdefineform.$invalid) {
+                $ionicPopup.alert({
+                    title: 'Invalid Locations',
+                    template: "You must enter a name for all four locations.",
+                    okText: "Try Again"
+                });
             }
 
+            localStorage.setItem('locations', JSON.stringify($scope.locations));
             window.localStorage['numSurveysCompleted'] = '0';
             window.localStorage['locsDefined'] = 'true';
+
+            console.log("localstorage now contains:");
+            var retrieved = JSON.parse(localStorage.getItem('locations'));
+            console.log(retrieved);
+
             // go to main menu
             $state.go('home');
 

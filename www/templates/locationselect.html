@@ -4,24 +4,29 @@
     </ion-header-bar>
 
     <ion-content>
+
         <div class="list list-inset">
 
-            <label class="item item-input item-select">
-                <div class="input-label">
-                    Where are you currently?
-                </div>
-                <select id="locSelect">
-                    <option>Please Choose</option>
-                    <option id="loc1"></option>
-                    <option id="loc2"></option>
-                    <option id="loc3"></option>
-                    <option id="loc4"></option>
-                </select>
-            </label>
+            <form name="selectlocationform" ng-controller="locationSelectController">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Where are you currently?
+                    </div>
+                    <select id="locSelect" required ng-model="selectedLocation">
+                        <option>{{locations._1}}</option>
+                        <option>{{locations._2}}</option>
+                        <option>{{locations._3}}</option>
+                        <option>{{locations._4}}</option>
+                    </select>
+                </label>
+                <button style="margin-top: 10px" ng-disabled="selectlocationform.$invalid"
+                        class="button button-calm horizontal_center continueButton"
+                        ng-click="locationSelectSubmitButtonOnClick()">Begin
+                </button>
+            </form>
+
         </div>
 
-        <button class="button button-calm horizontal_center" ng-click="locationSelectSubmitButtonOnClick()">Begin
-        </button>
     </ion-content>
 
 </ion-view>

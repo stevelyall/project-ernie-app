@@ -5,6 +5,8 @@
 angular.module('ernie-app.controllers')
     .controller('initController', function ($scope, $state) {
 
+        localStorage.clear();
+
         console.log("license?" + window.localStorage['licenseAccepted']);
         console.log("privacy?" + window.localStorage['privacyAccepted']);
         if (window.localStorage['licenseAccepted'] == undefined) {

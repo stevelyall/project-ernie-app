@@ -126,7 +126,7 @@ Styles for disclaimer/privacy policy/consent
     left: 40px;
 }
 
-.continueButton {
+.absoluteContinueButton {
     position: absolute;
     right: 10px;
 }
@@ -172,7 +172,7 @@ Styles for demographics view
 =================
 */
 
-#demographicsContinueButton {
+.continueButton {
     margin-top: 10px;
 }
 

@@ -4,38 +4,42 @@
     </ion-header-bar>
 
     <ion-content>
+
         <div class="item item-text-wrap">
             <p>
                 Please name the four locations where you spend most of your time.
             </p>
         </div>
+        <form name="locationdefineform" ng-controller="locationDefineController">
         <div class="list">
             <label class="item item-input">
                 <span class="input-label">1:</span>
-                <input id="loc1Input" type="text">
+                <input id="loc1Input" type="text" ng-model="locations._1" required>
             </label>
         </div>
         <div class="list">
             <label class="item item-input">
                 <span class="input-label">2:</span>
-                <input id="loc2Input" type="text">
+                <input id="loc2Input" type="text" ng-model="locations._2" required>
             </label>
         </div>
         <div class="list">
             <label class="item item-input">
                 <span class="input-label">3:</span>
-                <input id="loc3Input" type="text">
+                <input id="loc3Input" type="text" ng-model="locations._3" required>
             </label>
         </div>
         <div id="participantIdFromUser" class="list">
             <label class="item item-input">
                 <span class="input-label">4:</span>
-                <input id="loc4Input" type="text">
+                <input id="loc4Input" type="text" ng-model="locations._4" required>
             </label>
         </div>
 
-        <button class="button button-calm horizontal_center" ng-click="locationDefineSubmitButtonOnClick()">Done
+            <button class="button button-calm horizontal_center" ng-disabled="locationdefineform.$invalid"
+                    ng-click="locationDefineSubmitButtonOnClick()">Done
         </button>
+        </form>
     </ion-content>
 
 </ion-view>

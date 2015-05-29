@@ -4,32 +4,38 @@
     </ion-header-bar>
 
     <ion-content>
+        <form name="participantIDForm" ng-controller="participantIdController">
 
-        <div class="list list-inset">
+            <div class="list list-inset">
             <label class="item item-radio">
-                <input type="radio" name="group" id="participantIdButton">
+                <input type="radio" name="wasGivenID" ng-model="wasGivenID" value="true">
                 <div class="item-content">
                     I was given a participant ID
                 </div>
                 <i class="radio-icon ion-checkmark"></i>
             </label>
             <label class="item item-radio">
-                <input type="radio" name="group" id="noParticipantIdButton">
+                <input type="radio" name="wasGivenID" ng-model="wasGivenID" value="false" id="noParticipantIdButton">
                 <div class="item-content">
                     I was not given a participant ID
                 </div>
                 <i class="radio-icon ion-checkmark"></i>
             </label>
         </div>
-        <div id="participantIdFromUser" class="list">
+
+            <div id="participantIdFromUser" class="list list-inset" ng-show="wasGivenID == 'true'">
             <label class="item item-input">
                 <span class="input-label">Enter your ID:</span>
-                <input id="participantIdInput" type="text">
+                <input id="participantIdInput" type="text" ng-model="participant.participantId"
+                       ng-required="wasGivenID == 'true'" ng-minlength="1" ng-maxlength="10">
             </label>
         </div>
 
+            <button ng-disabled="participantIDForm.$invalid || wasGivenID == undefined"
+                    class="button button-calm horizontal_center" ng-click="participantIdSubmitButtonOnClick()">Done
+            </button>
 
-        <button class="button button-calm horizontal_center" ng-click="participantIdSubmitButtonOnClick()">Done</button>
+        </form>
     </ion-content>
 
 </ion-view>
