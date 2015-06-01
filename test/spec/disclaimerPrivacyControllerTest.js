@@ -31,12 +31,11 @@ describe('disclaimer/privacy controller', function() {
 			expect($state).toBeDefined();
 		});
 
-		it('disclaimer accepted on button click', function() {
-			expect(localStorage['disclaimerAccepted']).not.toBeDefined();
-			$scope.disclaimerContinueButtonOnClick();
-			expect(localStorage['disclaimerAccepted']).toBe('true');
-
-
-		});
+		//it('disclaimer accepted on button click', function() {
+		//	expect(localStorage['disclaimerAccepted']).not.toBeDefined();
+		//	$scope.disclaimerContinueButtonOnClick();
+		//	expect(localStorage['disclaimerAccepted']).toBe('true');
+		//
+		//});
 	});
 });
