@@ -13,4 +13,5 @@ before_script:
 
 
 after_script:
- - 'cd test; karma start'
+ - 'cd test'
+ - 'karma start /test/karma.conf.js'
