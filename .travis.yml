@@ -10,8 +10,7 @@ before_script:
   - 'npm install karma-jasmine -g'
   - 'npm install' # install npm packages
   - 'bower install' # install bower packages
+  - npm list -g
 
 
 after_script:
- - 'cd test'
- - 'karma start /test/karma.conf.js'
