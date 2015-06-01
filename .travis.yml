@@ -11,3 +11,4 @@ before_script:
 
 
 after_script:
+ - 'karma'

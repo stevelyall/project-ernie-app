@@ -19,9 +19,15 @@
     "phantomjs": "^1.9.17",
     "shelljs": "^0.3.0"
   },
+
+  "scripts": {
+    "test": "karma start --single-run --browsers PhantomJS"
+  },
+
   "cordovaPlugins": [
     "https://github.com/jcjee/email-composer.git",
     "https://github.com/katzer/cordova-plugin-email-composer.git",
     "org.apache.cordova.device"
   ]
+
 }
