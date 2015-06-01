@@ -6,11 +6,11 @@ before_script:
   - 'export DISPLAY=:99.0'
   - 'sh -e /etc/init.d/xvfb start'
 
-  - 'npm install -g bower grunt-cli jshint phantomjs'
-  - 'npm install karma-jasmine -g'
+  - 'npm install -g bower grunt-cli jshint phantomjs karma-jasmine --save-dev'
   - 'npm install' # install npm packages
   - 'bower install' # install bower packages
-  - cp /test/karma.conf.js /home/travis/.nvm/v0.10.33/lib
+  - karma init test/karma.conf.js
+  - karma start
 
 
 after_script:
