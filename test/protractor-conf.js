@@ -5,7 +5,7 @@ exports.config = {
         'browserName': 'chrome'
     },
     specs: [
-        'e2e/disclaimerPrivacyTest.js',
+        'e2e/*.js',
         'e2e/homeTest.js'
     ],
     jasmineNodeOpts: {

@@ -1,51 +1,16 @@
-language: android
-android:
-components:
-- platform-tools
-- tools
-- build-tools-19.0.0
-- android-19
-env:
-
-global:
-
-before_install:
-- echo "Before install stage"
-
-install:
-- echo "Install stage"
-- sudo apt-get install nodejs
-- sudo apt-get install npm
-- sudo apt-get update -y
-#- sudo apt-get install -y nodejs imagemagick
-- sudo npm -g install ionic
-##cordova ionic gulp cordova-gen bower
-- sudo npm install
+language: node_js
+node_js:
+  - '0.10.33'
 before_script:
-- echo "Before script stage"
-script:
-- echo "Script stage"
-- gulp
-- ionic platform add android
-- cordova plugin add com.jcjee.plugins.emailcomposer
-- cordova plugin add org.apache.cordova.device
-#- cordova plugin add org.apache.cordova.dialogs
-#- cordova plugin add org.apache.cordova.network-information
-- cordova plugin add https://github.com/driftyco/ionic-plugins-keyboard.git
-- ionic resources
-- ionic build android
-after_success:
-# - success!
-#- bash ./.push-release.sh
-after_failure:
-- echo "After failure stage"
+  - pwd
+  - 'export CHROME_BIN=chromium-browser'
+  - 'export DISPLAY=:99.0'
+  - 'sh -e /etc/init.d/xvfb start'
+
+  - 'npm install -g bower grunt-cli jshint phantomjs karma-jasmine karma-phantomjs-launcher --save-dev'
+  - 'npm install' # install npm packages
+  - 'bower install' # install bower packages
+  - karma start test/karma.conf.js
+
+
 after_script:
-- echo "After script stage"
-#deploy:
-#provider: releases
-#api_key:
-#secure: O6zuQzSv6husuKQkm3XOF2w8wMtxf6osgsN2xisZoGXJoSdk3n5abM17XI23MTzl57CsNnNnk0aASp2gkCUkMvyrXwmVY1aph61ehr6OunNvAnmXsMUF02nglKhmIzMAq7FMOtR/3f4sd1cCeROTEDpZYovFPNnsFIKgrFU4wwM=
-#file: platforms/android/ant-build/CordovaApp-debug.apk
-#on:
-#tags: true
-#all_branches: true
