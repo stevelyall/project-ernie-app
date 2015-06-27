@@ -2,6 +2,7 @@
 # http://git-scm.com/docs/gitignore
 
 platforms/
+node_modules/
 *.apk
 *.keystore
 *.sh
