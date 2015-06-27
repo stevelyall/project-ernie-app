@@ -28,7 +28,5 @@
     "de.appplant.cordova.plugin.local-notification",
     "org.apache.cordova.device"
   ],
-  "cordovaPlatforms": [
-    "android"
-  ]
+  "cordovaPlatforms": []
 }
