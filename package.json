@@ -4,7 +4,7 @@
   "description": "ernie-app: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
-    "gulp-sass": "^0.7.1",
+    "gulp-sass": "^1.3.3",
     "gulp-concat": "^2.2.0",
     "gulp-minify-css": "^0.3.0",
     "gulp-rename": "^1.2.0"
@@ -20,13 +20,13 @@
     "shelljs": "^0.3.0"
   },
   "scripts": {
-	"test": "/node_modules/.bin/karma start --single-run --browsers PhantomJS"
+    "test": "/node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
-
   "cordovaPlugins": [
-    "https://github.com/jcjee/email-composer.git",
-    "https://github.com/katzer/cordova-plugin-email-composer.git",
+    "com.ionic.keyboard",
+    "de.appplant.cordova.plugin.email-composer",
+    "de.appplant.cordova.plugin.local-notification",
     "org.apache.cordova.device"
-  ]
-
+  ],
+  "cordovaPlatforms": []
 }
