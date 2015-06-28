@@ -6,11 +6,10 @@ before_script:
   - 'export CHROME_BIN=chromium-browser'
   - 'export DISPLAY=:99.0'
   - 'sh -e /etc/init.d/xvfb start'
-
-  #- 'npm install -g bower grunt-cli jshint phantomjs karma-jasmine karma-phantomjs-launcher --save-dev'
+  - 'npm install -g ionic'
   - 'npm install' # install npm packages
   - 'bower install' # install bower packages
-  - karma start test/karma.conf.js
 
-
+  - pwd
+  -cat /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js/angular/angular.js
 after_script:

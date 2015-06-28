@@ -10,6 +10,7 @@
     "gulp-rename": "^1.2.0"
   },
   "devDependencies": {
+	"angular-mocks": "1.3.6",
     "bower": "^1.3.3",
     "gulp-util": "^2.2.14",
     "jasmine-core": "^2.3.4",
@@ -20,7 +21,7 @@
     "shelljs": "^0.3.0"
   },
   "scripts": {
-    "test": "/node_modules/.bin/karma start --single-run --browsers PhantomJS"
+    "test": "node_modules/.bin/karma start test/karma.conf.js --single-run --browsers PhantomJS"
   },
   "cordovaPlugins": [
     "com.ionic.keyboard",
@@ -28,5 +29,7 @@
     "de.appplant.cordova.plugin.local-notification",
     "org.apache.cordova.device"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    "android"
+  ]
 }

@@ -15,18 +15,20 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+
         'www/lib/ionic/js/angular/angular.js',
         'www/lib/ionic/js/angular/angular-animate.js',
         'www/lib/ionic/js/angular/angular-sanitize.js',
-        'node_modules/angular-mocks/angular-mocks.js',
         'www/lib/ionic/js/angular/angular-resource.js',
         'www/lib/ionic/js/angular-ui/angular-ui-router.js',
+		'node_modules/angular-mocks/angular-mocks.js',
 
         'www/lib/ionic/js/ionic.js',
         'www/lib/ionic/js/ionic-angular.js',
         'www/lib/ng-cordova/dist/ng-cordova.js',
 
         'www/js/app.js',
+		'www/js/services/*.js',
         'www/js/controllers.js',
 
         'www/js/controllers/*.js',
@@ -67,7 +69,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_DEBUG,
+	  logLevel: config.LOG_DISABLE,
 
 
     // enable / disable watching file and executing tests whenever any file changes
@@ -81,14 +83,11 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+	  singleRun: true,
 
     plugins : [
-        //'karma-junit-reporter',
-        'karma-chrome-launcher',
-        'karma-firefox-launcher',
         'karma-phantomjs-launcher',
         'karma-jasmine'
-    ],
+	]
   });
 };
