@@ -7,8 +7,6 @@ angular.module('ernie-app.controllers')
 
         localStorage.clear();
 
-		ernieservice.notify();
-
         console.log("license?" + window.localStorage['licenseAccepted']);
         console.log("privacy?" + window.localStorage['privacyAccepted']);
 
