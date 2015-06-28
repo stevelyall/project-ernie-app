@@ -1,4 +1,4 @@
-# ERA mobile application Readme
+# ERA Mobile Application [![Build Status](https://travis-ci.org/stevelyall/project-ernie-app.svg?branch=notification)](https://travis-ci.org/stevelyall/project-ernie-app)
 https://github.com/stevelyall/project-ernie-app
 
 The ERA mobile app is downloaded by participants participating in the ERA project studies, and collects demographic information and survey responses from participants and sends them to the server. It is a hybrid mobile application built using the Ionic Framework (http://ionicframework.com/), relying on HTML5, CSS3, and AngularJS. To install the framework and the required components to build the application for either platform, visit the Getting Started page on the Ionic site: http://ionicframework.com/getting-started/

@@ -13,4 +13,4 @@ before_script:
   - pwd
 
   -cat /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js/angular/angular.js
-after_script:
+after_script:K
