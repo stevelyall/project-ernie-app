@@ -13,7 +13,9 @@ before_script:
   - ls /home/travis/build/stevelyall/project-ernie-app/
   - ls /home/travis/build/stevelyall/project-ernie-app/www/
   - ls /home/travis/build/stevelyall/project-ernie-app/www/lib
-  - ls /home/travis/build/stevelyall/project-ernie-app/www/lib/lionic
+
+  - ls /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic
+
   - ls /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js
   - cat /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js/angular
 after_script:
