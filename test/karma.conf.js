@@ -27,6 +27,7 @@ module.exports = function(config) {
         'www/lib/ng-cordova/dist/ng-cordova.js',
 
         'www/js/app.js',
+		'www/js/services/*.js',
         'www/js/controllers.js',
 
         'www/js/controllers/*.js',
