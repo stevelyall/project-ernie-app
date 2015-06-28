@@ -30,6 +30,5 @@
     "org.apache.cordova.device"
   ],
   "cordovaPlatforms": [
-    "android"
   ]
 }

@@ -7,9 +7,10 @@ before_script:
   - 'export DISPLAY=:99.0'
   - 'sh -e /etc/init.d/xvfb start'
   - 'npm install -g ionic'
-  - 'npm install' # install npm packages
   - 'bower install' # install bower packages
 
   - pwd
+  - ls -alh /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js/angular
+  - ls -alh /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js
   - cat /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js/angular/angular.js
 after_script:
