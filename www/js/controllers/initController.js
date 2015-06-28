@@ -3,7 +3,7 @@
  */
 
 angular.module('ernie-app.controllers')
-	.controller('initController', function ($scope, ernieservice, $state) {
+	.controller('initController', function ($scope, $state) {
 
         localStorage.clear();
 
