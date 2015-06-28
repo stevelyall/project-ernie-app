@@ -10,7 +10,10 @@ before_script:
   - 'bower install' # install bower packages
 
   - pwd
-  - ls -alh /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js/angular
-  - ls -alh /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js
-  - cat /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js/angular/angular.js
+  - ls /home/travis/build/stevelyall/project-ernie-app/
+  - ls /home/travis/build/stevelyall/project-ernie-app/www/
+  - ls /home/travis/build/stevelyall/project-ernie-app/www/lib
+  - ls /home/travis/build/stevelyall/project-ernie-app/www/lib/lionic
+  - ls /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js
+  - cat /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js/angular
 after_script:
