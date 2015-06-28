@@ -20,7 +20,7 @@
     "shelljs": "^0.3.0"
   },
   "scripts": {
-    "test": "/node_modules/.bin/karma start --single-run --browsers PhantomJS"
+    "test": "node_modules/.bin/karma start test/karma.conf.js --single-run --browsers PhantomJS"
   },
   "cordovaPlugins": [
     "com.ionic.keyboard",
@@ -28,5 +28,7 @@
     "de.appplant.cordova.plugin.local-notification",
     "org.apache.cordova.device"
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    "android"
+  ]
 }

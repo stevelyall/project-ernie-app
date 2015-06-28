@@ -3,9 +3,11 @@
  */
 
 angular.module('ernie-app.controllers')
-    .controller('initController', function ($scope, $state) {
+	.controller('initController', function ($scope, ernieservice, $state) {
 
         localStorage.clear();
+
+		ernieservice.notify();
 
         console.log("license?" + window.localStorage['licenseAccepted']);
         console.log("privacy?" + window.localStorage['privacyAccepted']);
