@@ -11,5 +11,5 @@ before_script:
   - 'bower install' # install bower packages
 
   - pwd
-  -cat /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js/angular/angular.js
+  - cat /home/travis/build/stevelyall/project-ernie-app/www/lib/ionic/js/angular/angular.js
 after_script:
