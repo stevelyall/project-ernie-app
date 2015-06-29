@@ -10,7 +10,7 @@
     "gulp-rename": "^1.2.0"
   },
   "devDependencies": {
-	"angular-mocks": "1.3.6",
+    "angular-mocks": "1.3.6",
     "bower": "^1.3.3",
     "gulp-util": "^2.2.14",
     "jasmine-core": "^2.3.4",
@@ -26,9 +26,10 @@
   "cordovaPlugins": [
     "com.ionic.keyboard",
     "de.appplant.cordova.plugin.email-composer",
-    "de.appplant.cordova.plugin.local-notification",
-    "org.apache.cordova.device"
+    "org.apache.cordova.device",
+    "de.appplant.cordova.plugin.local-notification"
   ],
   "cordovaPlatforms": [
+    "ios"
   ]
 }
