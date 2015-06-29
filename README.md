@@ -18,10 +18,9 @@ As the user progresses through the survey, responses are stored in local storage
  * ngCordova - extensions for AngularJS for Cordova. http://ngcordova.com/
 
  * Ionic Keyboard Plugin - allows for easier control of device keyboard. https://github.com/driftyco/ionic-plugin-keyboard
- * Apache Cordova Local Notifications - to display notifications on Android and iOS devices. https://github.com/katzer/cordova-plugin-local-notifications
  * Apache Cordova Device Plugin - used to access UUID for the device, which is used as a substitute for a researcher-provided participant id. https://github.com/apache/cordova-plugin-device
  * Email Composer with Attachments Plugin - used to compose a blank email message for beta testers to send feedback. https://github.com/jcjee/email-composer
-
+ * Apache Cordova Local Notifications - for displaying local notifications on iOS and Android devices. https://github.com/katzer/cordova-plugin-local-notifications
 
 ## Setting up environment to develop ERA
 
@@ -62,3 +61,8 @@ ionic serve
 ```
 
 Additional information on Ionic and how to work with Ionic projects can be found at http://ionicframework.com/docs/
+
+## Current Status
+The next step in development should focus on implementing local notifications and a service to manage the survey schedule while the application is not running in the foreground. Work up until this point has focused on bringing the iOS beta version up to the standard of the Android beta, though the iOS one has yet to be distributed to testers. 
+Some refactoring has been done to simplify the process of making model changes as work continues.
+The ionic project has been configured for unit testing with the Jasmine framework, and set up to have the tests run in TravisCI. 
